@@ -1,0 +1,60 @@
+#herobox
+  #herotitle
+    %h1
+      Reach Qualified Marketing, Communications and
+      Creative Professionals in the UK - Guaranteed.
+  #herobuttons
+    .greybutton
+      .buttontext Learn more
+    #or or
+    .redbutton
+      .buttontext= link_to 'Post Job Now'
+  .piclist
+    %ol
+      %li Trusted by over 300 UK Employers
+      %li Access a qualified applicant pool more quickly
+      %li Get the results you want or your money back
+#jobcontainer.grid_17
+  #search
+    #searchbar
+      = form_tag "", :method => 'get' do
+        = text_field_tag :search, params[:search]
+        = submit_tag "Search", :name => nil
+  #joblist
+    - @jobs.each do |job|
+      %div{:class => cycle('listing', 'listing_white')}
+        .job_title
+          = link_to job.title
+        .location
+          = job.location
+        .clear
+        .at_symbol
+          @
+        .employer_title
+          = job.employer.company_name
+        .date_stamp
+          -if current_applicant
+            =link_to "Apply to this job", apply_path(job) unless current_applicant.applied_to?(job) 
+        
+        
+        
+        
+    =paginate @jobs         
+  
+  #pagination
+    
+    
+    
+  #scoop
+    .scoopline
+      %h3 The Scoop on HotSeats.co
+    .scooppara
+      HotSeats.co is the UK's #1 jobsite specializing in marketing, communication and creative jobs. UK's top employers and brands to small business from across the country post their jobs on HotSeats.co to find qualified marketing, communications and creative professionals.
+      %br/
+      %br/
+      Whether you are looking for a professional in Marketing, Public Relations, Social Media, Branding, Design, SEO/SEM, Communications or Copywriting - HotSeats.co is the place to find them.
+      %br/
+      %br/
+      Posting your job on HotSeats.co is easy, affordable and comes with a 100% satisfaction guarantee. Your job will also be seen by hundreds of thousands of passive candidates on FreshGigs.ca partner websites, giving you unprecedented exposure to ensure you find the most qualified candidates.
+      %r
+        = link_to 'Post Your Job Now'

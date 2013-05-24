@@ -1,0 +1,430 @@
+
+/*********************
+                COLORS
+********************
+
+The red: #BF0404
+black: #000000
+grey background: #F5F3F3
+grey buttons, thin lines: #9797A6
+job view grey: #F8F8F8
+dark red lines: #590202
+
+*/
+
+
+
+/*********************
+                LAYOUT
+*********************/
+body { 
+        background-image:url(/assets/background.png);
+        background-repeat: repeat;
+
+
+
+}
+
+a:link {text-decoration: none;}
+
+#wrapper { 
+        background-color: #FFFFFF;
+         box-shadow: 0px 7px 7px 0px #9797A6;
+        
+
+    -webkit-border-radius: 0 0 8px 8px;
+        -moz-border-radius: 0 0 8px 8px;
+        border-radius: 0 0 8px 8px;
+        
+        behavior: url(/JS/PIE.htc);   
+
+
+      
+
+}
+
+#header {
+        width: 100%; 
+        background-color: #FFFFFF; 
+        height: 120px;
+        border-bottom: 1px solid black;
+
+}
+
+#header { }
+
+#navbar {
+
+
+        border: 1px solid #696;
+
+        -webkit-border-radius: 8px 8px 0 0;
+        -moz-border-radius: 8px 8px 0 0;
+        border-radius: 8px 8px 0 0;
+        
+        behavior: url(/JS/PIE.htc);
+
+        
+        background-color: #BF0404;
+        height: 40px;
+        bottom: 0px;
+        color: white;
+  
+        
+}
+
+#herobox {
+        height: 220px;
+        background-color: #F5F3F3;
+}
+
+
+
+#pagination {
+
+        background-color: #FFFFFF;
+        height: 66px;
+        padding-left: 10px;
+}
+
+#sidebar {
+        height: 700px;
+        
+}
+
+#scoop {
+        height: 300px;
+        background-color: #FFFFFF;
+        margin-left: 20px;
+        padding-bottom: 20px;
+}
+
+#search {
+
+        
+}
+
+#searchbar {
+
+        height: 30px;
+        margin: 18px;
+        
+}
+
+#footer {
+
+        height: 120px;
+        background-color: #BF0404;
+        -webkit-border-radius: 0 0 8px 8px;
+        -moz-border-radius: 0 0 8px 8px;
+        border-radius: 0 0 8px 8px;
+        
+        behavior: url(/JS/PIE.htc);
+
+
+
+
+}
+
+#jobcontainer { margin-right:  4px; background-color: white;}
+
+#logo { margin-top: 3px; float: left; margin-bottom: 2px }
+
+#social { float: right; margin-top: 40px; margin-right: 20px; }
+
+.space{ height: 50px;}
+
+/*********************
+        Job listing
+*********************/
+#joblist {
+
+        background-color: white;
+        height: 1350px;
+        font-size: 16px;
+}
+
+.listing {
+        border-top: 1px dashed #8C0202;
+        height: 69px;
+        background-color: #F8F8F8;
+        margin: 0px 20px;
+}
+
+.listing_white {
+        border-top: 1px dashed #8C0202;
+        height: 69px;
+        background-color: #FFFFFF;
+        margin: 0px 20px;
+}
+.job_title { float: left; margin: 10px 0 0 10px;}
+.employer_title { float: left; margin: 10px 0 0 5px;}
+.at_symbol{ color: #BF0404; float: left; margin: 10px 0 0 10px;}
+.location { float: right; margin: 10px 10px 0 0;}
+.date_stamp { float: right; margin: 10px 10px 0 0;}
+
+/*********************
+        Post job
+*********************/
+
+#postjob {grid}
+
+.sidebarline { border-right:  1px solid  #9797A6;}
+
+/*********************
+        BUTTONS & LINES
+*********************/
+
+.greybutton{
+
+        height: 35px;
+        background-color: #9797A6;
+        width: 110px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        
+        behavior: url(/JS/PIE.htc);
+        float: left;
+        margin-right: 20px;
+        box-shadow: 4px 4px 0 0 #757584;
+}
+
+.redbutton {
+
+        height: 35px;
+        background-color: #BF0404;
+        width: 120px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        float: left;
+        margin: 0 20px;
+        color: #FFFFFF;
+
+        
+        behavior: url(/JS/PIE.htc);
+
+        box-shadow: 4px 4px 0 0 #757584;
+}
+
+#herobuttons{
+        float: right;
+        color: #FFFFFF;
+        font-size: 17px;
+        padding-right: 110px;
+        margin-top: 30px;1
+}
+
+#or {
+        float: left;
+        color: #000000;
+        margin-top: 7px;
+}
+
+.vertline {
+
+        height: 90px;
+        border-right: 1px dashed white;
+        float: left;
+        margin-top: 15px;
+        margin-left: 25px;
+
+}
+
+.scoopline { 
+
+        border-bottom: 1px dashed #8C0202;
+        margin-bottom: 0px;
+        margin-right: 20px;
+}
+
+.scooppara { margin-top: 20px;}
+
+.solidline {
+
+        border-top: 1px solid  #9797A6;
+}
+
+/*********************
+                LISTS
+*********************/
+
+#navbar li {
+
+        display: inline;
+        color: #FFFFFF;
+}
+
+
+#navbar ol {
+
+        margin-top: 10px;
+}
+
+.piclist {
+        margin-left: 60px;
+}
+.piclist li {
+
+ background: url(tick.png) no-repeat left top;
+  padding: 0px 0px 0px 40px;
+  margin-top: 10px;
+  list-style: none;
+
+}
+
+#footer li {
+
+        list-style: none;
+        margin-top: 10px;
+
+}
+
+#footer ol {
+
+        float: left;
+        
+}
+
+#footer li:first-child {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 14px;
+
+}
+
+#footer {
+
+        font-size: 11px;
+        color: #FFFFFF;
+}
+
+/*********************
+                TEXT
+*********************/
+
+#herotitle {
+
+        padding:  10px 100px;
+        text-align: center;
+}
+
+.buttontext {
+
+        font-size: 17px;
+        margin-top: 7px;
+        text-align: center;
+        vertical-align: center;
+
+}
+
+.title {
+        margin-top: 15px;
+        margin-left: 5px;
+
+
+}
+
+.subheader {
+
+        margin-top: 10px;
+        margin-left: 4px;
+}
+
+
+/*********************
+                Sidebar
+*********************/
+
+.sidebarheader {
+
+        margin-top: 20px;
+}
+
+.redbutton_sidebar{
+
+
+
+        height: 35px;
+        background-color: #BF0404;
+        width: 110px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        
+        float: left;
+        color: #FFFFFF;
+        
+        behavior: url(/JS/PIE.htc);
+
+}
+
+.sidebarline { 
+
+        border-bottom: 1px dashed #8C0202;
+        margin-bottom: 0px;
+        margin-right: 20px;
+
+}
+
+.sidebar_content {
+
+        padding-top: 20px;
+        margin-right: 15px
+}
+
+/*********************
+                Employers
+*********************/
+
+/*.employerscontent{ float: right; border: 1px solid black;}
+
+.employersclients{ float: left; border: 1px solid black;}*/
+
+.employerstitle { text-align: center; margin-top: 20px; margin-bottom: 40px;}
+
+.redbutton_employers { 
+
+        height: 35px;
+        background-color: #BF0404;
+        width: 110px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        float: left;
+        
+        
+        color: #FFFFFF;
+        
+        behavior: url(/JS/PIE.htc);}
+
+.redline {
+        margin-top: 17px;
+        border-bottom: 1px dashed #8C0202;
+        margin-bottom: 50px;
+
+}
+
+.redline_gua {
+
+        border-top: 1px dashed #8C0202;
+
+
+}
+
+.guatitle { text-align: center; margin-top: 20px;}
+
+.guacontent { margin-top: 20px; margin-bottom: 20px;}
+
+.contactcontent {margin-left: 10px;}
+
+.logosmall {float: left;}
+
+.blogtitle {float: left; margin-top: 5px;}
+
+.blogcontent { margin-left: 20px; margin-right: 20px; margin-bottom: 20px; margin-top: 10px;}
+
+.blogpostdetails { margin-left: 20px;}
+
+.blogpostdetails p { margin-top: 7px;}

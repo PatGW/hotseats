@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hotseatsco</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		
+
+		<div id="header">
+			<div id="headercontent" class="container_24">
+				<div id="logo">
+					<%= image_tag("logo.png", :alt => "HotSeats.co Logo") %>
+				</div>
+				
+				
+				<div id="social">
+					
+				</div>
+
+				<div class="clear"></div>
+				<div style="background: Red; width: 200px;">
+				<%- if current_employer %>
+					<%-#= image_tag current_employer.logo.url %>
+					<%= link_to "Logout", destroy_employer_session_path, :method=>:delete %>
+				<%- else %>
+					<%= link_to "Employer Login", new_employer_session_path  %>
+				<%- end%>
+				
+
+
+				<%- unless current_employer %>
+					<%- if current_applicant %>
+					
+						<%= link_to "Logout", destroy_applicant_session_path, :method=>:delete %>
+					<%- else %>
+						<%= link_to "aplicant Login", new_applicant_session_path  %>
+						<%= link_to "aplicant Signup", new_applicant_registration_path  %>
+				
+					<%- end%>
+					
+				<%-end%>
+				
+				</div>
+
+				<div id="navbar" class="">
+					<ol>
+						<li>
+							<%= link_to "Jobs", root_path %>
+						</li>
+						<li>
+							<%= link_to "Post Job", new_jobs_path %>
+						</li>
+						<li>
+							<a href="/employer">Employers</a>
+						</li>
+						<li>
+							<%= link_to "Guarantee" %>
+						</li>
+
+						<li>
+							<a href="/blog">Blog</a>
+						<li>
+							<%= link_to "Contact"  %>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div class="container_24"><%=flash_message %></div>
+		<div id="wrapper" class="container_24">
+			
+			
+		<%= yield %>
+		
+		
+		</div>
+		<%=render "layouts/footer" %>
+		<%= debug(params) if Rails.env.development? %>
+
+	</body>
+</html>

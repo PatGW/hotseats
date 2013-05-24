@@ -1,0 +1,28 @@
+%h2 Post a job
+
+
+=semantic_form_for @job do |f|
+
+  =f.inputs "Job" do 
+    =f.input :title
+    =f.input :location
+    =f.input :position_type, as: :select, collection: ["Full-Time", "Contract", "Freelance"]
+    =f.input :description
+    =f.input :info
+
+
+  -unless current_employer 
+    =f.semantic_fields_for :employer do |e| 
+      =e.input :email
+      =e.input :password
+      =e.input :password_confirmation
+      =e.input :name
+      =e.input :city
+      =e.input :company_name
+      =e.input :website
+      =e.input :logo, as: :file
+      
+      
+  =f.submit      
+      
+      
