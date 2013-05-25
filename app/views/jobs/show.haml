@@ -1,0 +1,29 @@
+%h1 job view
+%p#notice= notice
+
+%p
+  %b Company Name
+  = @job.employer.company_name
+%p
+  %b Job Title:
+  = @job.title
+%p
+  %b Location:
+  = @job.location
+%p
+  %b Position Type:
+  = @job.position_type
+%p
+  %b Job Description:
+  = @job.description 
+%p
+  %b How to Apply:
+  = @job.info
+%p
+  %b Company Website:
+  = @job.employer.website 
+%p
+  %b Company Logo:
+  = image_tag @job.employer.logo
+
+

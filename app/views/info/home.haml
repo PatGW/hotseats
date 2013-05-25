@@ -32,6 +32,8 @@
           @
         .employer_title
           = job.employer.company_name
+          / = link_to job.title, jobs_path(job)
+
         .date_stamp
           -if current_applicant
             =link_to "Apply to this job", apply_path(job) unless current_applicant.applied_to?(job) 
