@@ -12,14 +12,17 @@ Hotseats::Application.routes.draw do
 
   get 'view-job/:id', to: "jobs#show", as: "viewjob"
 
-  get 'view-applications/:id', to: "job_applications#show", as: "viewapplications"
+  #get 'view-applications/:id', to: "job_applications#show", as: "viewapplications"
 
-  get 'my-jobs', to: "info#myjobs"
+  get 'view-applications/:id', to: "jobs#applications", as: "viewapplications"
+
+
+  get 'my-jobs', to: "jobs#myjobs"
   
 
   resource :jobs
 
-  resources :job_applications
+  #resources :job_applications
   
   
 

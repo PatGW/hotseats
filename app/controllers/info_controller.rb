@@ -7,16 +7,16 @@ class InfoController < ApplicationController
   end
   
   
-  def myjobs
+  # def myjobs
 
-  	# @jobs = Job.find(1)
+  # 	# @jobs = Job.find(1)
 
-  	# @user = current_employer
+  # 	# @user = current_employer
 
-  	@employerjobs = current_employer.jobs
+  # 	@employerjobs = current_employer.jobs
 
 
     
-  end
+  # end
 
 end

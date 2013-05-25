@@ -35,8 +35,26 @@ class JobsController < ApplicationController
 
 
   def show
+
       @job = Job.find(params[:id])
   end 
+
+  def myjobs
+
+    @employerjobs = current_employer.jobs
+ 
+  end  
+
+  def applications
+
+    @job = Job.find(params[:id]) 
+
+    @applications = @job.job_applications
+
+
+
+  end
+
   
 
   
