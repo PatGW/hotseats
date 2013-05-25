@@ -24,7 +24,8 @@
     - @jobs.each do |job|
       %div{:class => cycle('listing', 'listing_white')}
         .job_title
-          = link_to job.title
+          = link_to job.title, viewjob_path(job)
+          
         .location
           = job.location
         .clear
