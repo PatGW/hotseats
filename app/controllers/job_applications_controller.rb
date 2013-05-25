@@ -7,6 +7,14 @@ class JobApplicationsController < ApplicationController
     flash[:notice] = "you are applied"
     redirect_to root_path
   end
+
+  # def show
+
+  # 	@job_application = JobApplication.find(params[:id])
+
+
+
+  # end
   
   
   
