@@ -1,5 +1,7 @@
 these are my jobs JOBS
 
+raise @applications.inspect
+
 %p
 - @employerjobs.each do |job|
  = link_to job.title, viewjob_path(job)

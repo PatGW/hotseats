@@ -49,18 +49,7 @@ class JobsController < ApplicationController
 
     @job = Job.find(params[:id]) 
 
-    @applications = @job.job_applications
-
-
+      @applications = JobApplication.all(:select => "job_applications.*, applicants.*", :joins => :applicant, :conditions => "job_id = 1")
 
   end
-
-  
-
-  
-  
-  
-  
-
-
 end
