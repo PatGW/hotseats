@@ -10,8 +10,10 @@ gem 'rails', '3.2.13'
 group :development, :test do 
   gem 'sqlite3'
   gem 'taps'
+
 end
 
+gem 'rails-web-console', :require => 'console', :group => :development
 
 # Gems used only for assets and not required
 # in production environments by default.

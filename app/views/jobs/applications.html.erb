@@ -3,11 +3,41 @@ this jobs' applications
 
 
 <% @applications.each do |app| %>
+
+
  
  <p>
  Cover letter: 
+ <p>
  <%= app.cover_letter %>
+ <p> 
+ Email:
+ <p>
+ 
  <%= app.email %>
+ <p> 
+ Applicant name:
+<p>
+ <%= app.name %>
+ <p> 
+ Location:
+ <p>
+ <%= app.city %>
+ <p>
+ Website:
+ <p>
+ <%= app.website %>
+ <p>
+ Resume:
+ <p>	
+ <%= app.resume %>
+ <p> 
+Applied date/time:
+
+ <%= app.created_at %>
+
+
+
 
  <% end %>
 
