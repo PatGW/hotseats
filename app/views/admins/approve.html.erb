@@ -1,9 +1,15 @@
 
-<% if current_employer.admin == true %>
+<% if is_admin? == true %>
 	you are admin
+<% elsif current_applicant  %>
+	you are an applicant
 	<% else %>
-	you are not admin
-<% end %>	 
+	you are not logged in
+<% end %>
+
+	
+
+
 
 <h1> Approved Applicants </h1>
 
