@@ -33,6 +33,6 @@ Job.create title: "prostitute", location: "london", description: "asd", info: "a
 a = Applicant.new
 a.name = "James Smith"
 a.city = "Southampton"
-a.email = "applicant@example"
+a.email = "applicant@example.com"
 a.password = "testtest"
 a.save

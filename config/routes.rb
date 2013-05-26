@@ -18,6 +18,8 @@ Hotseats::Application.routes.draw do
 
 
   get 'my-jobs', to: "jobs#myjobs"
+
+  get 'approve-applicants', to: "admins#approve", as: "approve"
   
 
   resource :jobs

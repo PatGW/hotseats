@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(:version => 5) do
   add_index "applicants", ["reset_password_token"], :name => "index_applicants_on_reset_password_token", :unique => true
 
   create_table "employers", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                  :default => "",    :null => false
+    t.string   "encrypted_password",     :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -55,13 +55,14 @@ ActiveRecord::Schema.define(:version => 5) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "name",                                   :null => false
-    t.string   "city",                                   :null => false
-    t.string   "company_name",                           :null => false
+    t.string   "name",                                      :null => false
+    t.string   "city",                                      :null => false
+    t.string   "company_name",                              :null => false
     t.string   "website"
+    t.boolean  "admin",                  :default => false, :null => false
     t.string   "logo"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   add_index "employers", ["email"], :name => "index_employers_on_email", :unique => true
