@@ -1,15 +1,41 @@
-
+	
 <% if is_admin? == true %>
-	you are admin
+
+
+<h1> Applicants awaiting approval </h1>
+
+	<% @notapproved.each do |na| %>
+
+		<%= na.name %> 
+		<p>
+		<%= na.city %> 
+		<p>
+		<%= na.website %>
+		<p>
+		<%= na.email %>
+		<p>
+		<%= na.resume %>
+		<p>
+		<%= na.created_at %>
+		<p>
+
+		
+	
+
+
+		
+		
+		
+	<% end %>
 <% elsif current_applicant  %>
 	you are an applicant
 	<% else %>
 	you are not logged in
 <% end %>
 
+
 	
 
 
 
-<h1> Approved Applicants </h1>
 
