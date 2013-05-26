@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(:version => 5) do
 
   create_table "applicants", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                  :default => "",    :null => false
+    t.string   "encrypted_password",     :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -28,13 +28,14 @@ ActiveRecord::Schema.define(:version => 5) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.string   "name",                                   :null => false
-    t.string   "city",                                   :null => false
+    t.string   "name",                                      :null => false
+    t.string   "city",                                      :null => false
     t.string   "website"
     t.string   "description"
     t.string   "resume"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.boolean  "approved",               :default => false, :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   add_index "applicants", ["email"], :name => "index_applicants_on_email", :unique => true

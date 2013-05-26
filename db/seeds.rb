@@ -9,11 +9,11 @@
 
 
 a = Employer.new
-a.name = "tm"
-a.company_name = "fu-media"
-a.city = "bremen"
-a.email = "asd@asd.de"
-a.password = "12345678"
+a.name = "Ben Cole"
+a.company_name = "BMC enter"
+a.city = "London"
+a.email = "employer@example.com"
+a.password = "testtest"
 a.save
 
 
@@ -31,8 +31,8 @@ Job.create title: "prostitute", location: "london", description: "asd", info: "a
 
 
 a = Applicant.new
-a.name = "tm  app"
-a.city = "bremen"
-a.email = "asd@asd.de"
-a.password = "12345678"
+a.name = "James Smith"
+a.city = "Southampton"
+a.email = "applicant@example"
+a.password = "testtest"
 a.save
