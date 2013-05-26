@@ -40,6 +40,8 @@ class JobsController < ApplicationController
 
   end 
 
+ 
+
   def myjobs
 
     @employerjobs = current_employer.jobs

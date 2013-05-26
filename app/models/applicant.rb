@@ -5,7 +5,7 @@ class Applicant < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :city, :website, :description, :resume, :skill_list
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :city, :website, :description, :resume, :skill_list, :approved
   
   validates :name, presence: true
   validates :city, presence: true

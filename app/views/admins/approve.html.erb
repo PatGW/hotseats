@@ -2,6 +2,10 @@
 <% if is_admin? == true %>
 
 
+<%= @applicantid %>
+
+<%= @applicant %>
+
 <h1> Applicants awaiting approval </h1>
 
 	<% @notapproved.each do |na| %>
@@ -23,8 +27,8 @@
 	
 
 
-		
-		
+<%= link_to("approve applicant", approver_path(@applicant), :method => :put, :confirm => "are you sure?") %>
+
 		
 	<% end %>
 <% elsif current_applicant  %>

@@ -1,6 +1,7 @@
 Hotseats::Application.routes.draw do
   
   devise_for :applicants
+
   devise_for :employers
 
 
@@ -19,7 +20,13 @@ Hotseats::Application.routes.draw do
 
   get 'my-jobs', to: "jobs#myjobs"
 
-  get 'approve-applicants', to: "admins#approve", as: "approve"
+  get 'approve', to: "admins#approve", as: "approve"
+
+  get 'approve-applicants/:id', to: "admins#approve", as: "approveid"
+
+  put 'approver/:id', to: "admins#update", as: "approver"
+
+ 
   
 
   resource :jobs
