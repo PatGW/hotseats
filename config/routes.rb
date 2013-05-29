@@ -20,11 +20,13 @@ Hotseats::Application.routes.draw do
 
   get 'my-jobs', to: "jobs#myjobs", as: "myjobs"
 
-  get 'approve', to: "admins#approve", as: "approve"
+  # get 'approve', to: "admins#approve", as: "approve"
 
-  get 'approve-applicants/:id', to: "admins#approve", as: "approveid"
+  get 'approve-applicants', to: "admins#approve", as: "approveid"
 
-  put 'approver/:id', to: "admins#update", as: "approver"
+  put 'approve-applicants/:id', to: "admins#update", as: "ap"
+
+  # put 'approver/:id', to: "admins#update", as: "approver"
 
  
   

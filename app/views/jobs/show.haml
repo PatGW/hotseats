@@ -1,3 +1,5 @@
+= debug current_applicant
+
 %h1 job view
 %p#notice= notice
 
@@ -25,5 +27,12 @@
 %p
   %b Company Logo:
   = image_tag @job.employer.logo
+
+  -if current_applicant && current_applicant.approved == true
+    =link_to "Apply to this job"
+  -elsif current_applicant
+    You are not approved yet
+  -else
+  You need to sign up to apply for jobs
 
 

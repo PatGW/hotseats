@@ -2,9 +2,7 @@
 <% if is_admin? == true %>
 
 
-<%= @applicantid %>
-
-<%= @applicant %>
+<%= debug @notapproved %>
 
 <h1> Applicants awaiting approval </h1>
 
@@ -27,14 +25,15 @@
 	
 
 
-<%= link_to("approve applicant", approver_path(@applicant), :method => :put, :confirm => "are you sure?") %>
+<%= link_to("approve applicant", ap_path(na.id), :method => :put, :confirm => "are you sure?") %>
+
 
 		
 	<% end %>
 <% elsif current_applicant  %>
 	Not Authorised - You are an applicant
 	<% else %>
-	Not Authorised - You are not logged in
+	Not Authorised
 <% end %>
 
 

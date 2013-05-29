@@ -60,6 +60,10 @@ class JobsController < ApplicationController
 
     @applications = JobApplication.all(:select => "job_applications.*, applicants.*", :joins => :applicant, :conditions => "job_id = #{job_id}")
 
+
+  
+
+
   end
 
   private

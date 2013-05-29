@@ -2,11 +2,15 @@ class AdminsController < ApplicationController
 
 	def approve
 
-		@notapproved = Applicant.all
+		@notapproved = Applicant.where(:approved => false) 
 
 		@applicantid = params[:id]
 
 		@applicant = params[:id]
+
+		# def applied_to?(job)
+  #   	JobApplication.where(job_id: job, applicant_id: self).present?    
+  	# end
 	end	
 
 	def update 
