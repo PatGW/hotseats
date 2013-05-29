@@ -25,6 +25,7 @@
 				<%- if current_employer %>
 					<%-#= image_tag current_employer.logo.url %>
 					<%= link_to "Logout", destroy_employer_session_path, :method=>:delete %>
+					<%= link_to "My Jobs", myjobs_path %>
 				<%- else %>
 					<%= link_to "Employer Login", new_employer_session_path  %>
 				<%- end%>

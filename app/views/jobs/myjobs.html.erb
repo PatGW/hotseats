@@ -1,0 +1,29 @@
+
+<% if is_employer? == true %> 
+
+you are employer <p>
+
+<% @employerjobs.each do |job| %>
+	 <%= link_to job.title, viewjob_path(job) %>
+	 <p> 
+	 <%= job.location %>
+	 <p>
+	 <%= link_to "view applications", viewapplications_path(job) %>
+	 <p>
+	<% end %> 	
+	 
+
+
+<% else %>
+
+you are not an employer
+
+<% end %>
+
+
+
+
+
+
+
+

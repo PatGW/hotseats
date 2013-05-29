@@ -18,7 +18,7 @@ Hotseats::Application.routes.draw do
   get 'view-applications/:id', to: "jobs#applications", as: "viewapplications"
 
 
-  get 'my-jobs', to: "jobs#myjobs"
+  get 'my-jobs', to: "jobs#myjobs", as: "myjobs"
 
   get 'approve', to: "admins#approve", as: "approve"
 

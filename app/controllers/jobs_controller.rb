@@ -1,4 +1,7 @@
 class JobsController < ApplicationController
+  before_filter :employer_signed_in, only: [:myjobs]
+  # before_filter :authenticate_employer!, only: [:applications] 
+  before_filter :correct_employer?, only: [:applications] 
 
   def new
     @job = Job.new
@@ -43,10 +46,11 @@ class JobsController < ApplicationController
  
 
   def myjobs
-
+    
     @employerjobs = current_employer.jobs
  
   end  
+
 
   def applications
 
@@ -57,4 +61,48 @@ class JobsController < ApplicationController
     @applications = JobApplication.all(:select => "job_applications.*, applicants.*", :joins => :applicant, :conditions => "job_id = #{job_id}")
 
   end
+
+  private
+
+  def employer_signed_in
+      if is_employer? == true
+        return true
+      else
+
+      redirect_to root_path
+    end
+  end 
+
+  def correct_employer?
+
+    
+       @job = Job.find(params[:id])
+
+       # @employer = Employer.find(@job.employer_id)
+
+       if current_employer.id == @job.employer_id
+
+          return true
+
+        else
+
+        redirect_to root_path
+
+        end
+  end      
+
+    # if current_employer.id == params[:id]
+
+    #   return true
+    # else
+    #   redirect_to root_path
+    # end  
+
+  
+ 
+
+
+
+    
+ 
 end

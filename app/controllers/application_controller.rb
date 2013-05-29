@@ -2,6 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   #before_filter :authenticate_employer!
+
+  def is_employer?
+  		current_employer.present?		
+  end
+
   
   
   
