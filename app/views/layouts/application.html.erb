@@ -17,17 +17,13 @@
 				
 				
 				<div id="social">
-					
-				</div>
-
-				<div class="clear"></div>
-				<div style="background: Red; width: 200px;">
-				<%- if current_employer %>
+					<%- if current_employer %>
 					<%-#= image_tag current_employer.logo.url %>
-					<%= link_to "Logout", destroy_employer_session_path, :method=>:delete %>
+					Employers:
 					<%= link_to "My Jobs", myjobs_path %>
+					<%= link_to "Logout", destroy_employer_session_path, :method=>:delete %>
 				<%- else %>
-					<%= link_to "Employer Login", new_employer_session_path  %>
+					
 				<%- end%>
 				
 
@@ -37,12 +33,23 @@
 					
 						<%= link_to "Logout", destroy_applicant_session_path, :method=>:delete %>
 					<%- else %>
-						<%= link_to "aplicant Login", new_applicant_session_path  %>
-						<%= link_to "aplicant Signup", new_applicant_registration_path  %>
+					Job Seekers:
+						<%= link_to "Login", new_applicant_session_path  %>
+						<%= link_to "Signup", new_applicant_registration_path  %>
 				
 					<%- end%>
 					
 				<%-end%>
+
+				<%= link_to image_tag("facebook.png", :alt => "facebook small logo"), 'http://www.facebook.com' %>
+				<%= link_to image_tag("twitter.png", :alt => "facebook small logo"), 'http://www.twitter.com' %>
+				<%= link_to image_tag("google-plus.png", :alt => "facebook small logo"), 'http://plus.google.com/' %>
+					
+				</div>
+
+				<div class="clear"></div>
+				<div style="background: Red; width: 200px;">
+				
 				
 				</div>
 
@@ -55,17 +62,18 @@
 							<%= link_to "Post Job", new_jobs_path %>
 						</li>
 						<li>
-							<a href="/employer">Employers</a>
+							<%= link_to "Employers", employer_path %>
 						</li>
 						<li>
-							<%= link_to "Guarantee" %>
+							<%= link_to "Guarantee", guarantee_path %>
 						</li>
 
 						<li>
 							<a href="/blog">Blog</a>
 						<li>
-							<%= link_to "Contact"  %>
+							<%= link_to "Contact", contact_path %>
 						</li>
+						<li> <%= link_to "Employer Login", new_employer_session_path  %> </li>
 					</ol>
 				</div>
 			</div>

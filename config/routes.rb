@@ -28,6 +28,14 @@ Hotseats::Application.routes.draw do
 
   # put 'approver/:id', to: "admins#update", as: "approver"
 
+  get 'contact', to: "info#contact"
+
+  get 'blog', to: "info#blog"
+
+  get 'employer', to: "info#employer"
+
+  get 'guarantee', to: "info#guarantee"
+
  
   
 

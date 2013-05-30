@@ -11,30 +11,28 @@
 .clear
 
 
-
-
-
 #footer.container_24
   %ol
-    %li Jobs
+    %li= link_to "Jobs", root_path
+
   .vertline
   %ol
     %li Job Seekers
-    %li Sign Up
-    %li Login
+    %li= link_to "Sign Up", root_path
+    %li= link_to "Login", new_applicant_session_path 
     %li
   .vertline
   %ol
     %li Employers
-    %li Post Job
-    %li Guarantee
-    %li Partners
+    %li= link_to "Login", new_employer_session_path 
+    %li= link_to "Guarantee", guarantee_path
+   
   .vertline
   %ol
     %li About
-    %li Contact
+    %li= link_to "Contact", contact_path
   .vertline
   %ol
-    %li Blog
+    %li= link_to "Blog", blog_path
 .space
 
