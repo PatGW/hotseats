@@ -1,6 +1,6 @@
 
 /*********************
-                COLORS
+    COLORS
 ********************
 
 The red: #BF0404
@@ -15,7 +15,7 @@ dark red lines: #590202
 
 
 /*********************
-                LAYOUT
+     LAYOUT
 *********************/
 body { 
         background-image:url(/assets/background.png);
@@ -51,7 +51,7 @@ a:link {text-decoration: none;}
 
 }
 
-#header { }
+
 
 #navbar {
 
@@ -436,15 +436,18 @@ a:link {text-decoration: none;}
 .logincontainer {
         
     background-color: #FFFFFF;
-    box-shadow: 0px 7px 7px 0px #9797A6;
+    /*box-shadow: 0px 7px 7px 0px #9797A6;*/
         
 
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
+    -webkit-border-radius: 0px 0px 8px 8px;
+    -moz-border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 8px 8px;
         
     behavior: url(/JS/PIE.htc);   
     padding: 0px 20px;
+    border-left: solid 1px gray;
+    border-right: solid 1px gray;
+    border-bottom: solid 1px gray;
      
 }
 
@@ -460,7 +463,31 @@ a:link {text-decoration: none;}
 
 }
 
-#sessions_header {
+#sessionsheader {
+
+     width: 100%; 
+        background-color: #FFFFFF; 
+        height: 118px;
+       
 
 
 }
+
+#logintitle {
+
+    box-shadow: 0px #9797A6;
+        
+
+    -webkit-border-radius: 8px 8px 0px 0px;
+    -moz-border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
+        
+    behavior: url(/JS/PIE.htc);   
+    padding: 0px 20px;
+    border-top: solid 1px gray;
+    border-left: solid 1px gray;
+    border-right: solid 1px gray;
+
+
+}
+
