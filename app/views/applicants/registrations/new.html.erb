@@ -1,18 +1,47 @@
-<h2>Sign up</h2>
+<%= render "applicants/shared/sessionsheader" %>
+<div id="loginwrapper" class="container_24">
+	<div class="logincontainer grid_18 push_3">
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+		  <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+		   <div><%= f.label :name, "Full Name:" %><br />
+		  <%= f.text_field :name %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+		  <div><%= f.label :email, "Email:" %><br />
+		  <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+		  <div><%= f.label :password, "Password:"%><br />
+		  <%= f.password_field :password %></div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+		  <div><%= f.label :password_confirmation, "Confirm Password:" %><br />
+		  <%= f.password_field :password_confirmation %></div>
 
+		   
+
+		   <div><%= f.label :resume, "CV:" %><br />
+		  <%= f.file_field :resume %></div>
+		  
+		  
+		  <div><%= f.label :city, "UK City:"  %><br />
+		  <%= f.text_field :city %></div>
+
+		  <%= f.label :skill_list %>
+			<%-ActsAsTaggableOn::Tag.order(:name).each do |tag|%>
+		  		
+				<p><%= label_tag tag.name %>
+				<%= check_box_tag "applicant[skill_list][]", tag.name%>
+		  		<br />
+		  		
+		  	<%-end%>
+
+		  <div><%= f.submit "Sign up" %></div>
+		<% end %>
 <%= render "applicants/shared/links" %>
+	</div>
+</div>	
+
+
+
+
+
