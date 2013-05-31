@@ -1,3 +1,6 @@
+= render "layouts/header"
+= render "layouts/navbar"
+#wrapper.container_24/
 
 #herobox
   #herotitle
@@ -6,10 +9,10 @@
       Creative Professionals in the UK - Guaranteed.
   #herobuttons
     .greybutton
-      .buttontext Learn more
+      .buttontext= link_to 'Learn more', employer_path
     #or or
     .redbutton
-      .buttontext= link_to 'Post Job Now'
+      .buttontext= link_to 'Post Job Now', new_jobs_path
   .piclist
     %ol
       %li Trusted by over 300 UK Employers

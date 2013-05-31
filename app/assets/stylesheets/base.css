@@ -428,3 +428,39 @@ a:link {text-decoration: none;}
 .blogpostdetails { margin-left: 20px;}
 
 .blogpostdetails p { margin-top: 7px;}
+
+/*********************
+     Logins
+*********************/
+
+.logincontainer {
+        
+    background-color: #FFFFFF;
+    box-shadow: 0px 7px 7px 0px #9797A6;
+        
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+        
+    behavior: url(/JS/PIE.htc);   
+    padding: 0px 20px;
+     
+}
+
+.loginbox {
+
+    background-color: #f5f3f3;
+    -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        
+        behavior: url(/JS/PIE.htc);
+        padding-left: 20px;
+
+}
+
+#sessions_header {
+
+
+}
