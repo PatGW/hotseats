@@ -3,7 +3,8 @@ class InfoController < ApplicationController
 
 
   def home
-    @jobs = Job.order("created_at DESC").page(current_page).per(3)
+   
+    @jobs = Job.where(:jobpaid => true).order("created_at DESC").page(current_page).per(3)
   end
   
   

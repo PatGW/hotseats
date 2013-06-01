@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "applicants", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false
@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(:version => 5) do
     t.text     "info",                                   :null => false
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.boolean  "jobpaid"
   end
 
   create_table "taggings", :force => true do |t|
