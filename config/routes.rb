@@ -1,5 +1,10 @@
 Hotseats::Application.routes.draw do
   
+  resources :payment_notifications
+
+  post 'payment_notifications', to: "payment_notifications#create", as: "pn"
+
+
   devise_for :applicants
 
   devise_for :employers
