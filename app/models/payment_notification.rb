@@ -2,7 +2,7 @@ class PaymentNotification < ActiveRecord::Base
 	belongs_to :job
 	serialize :params
 	after_create :mark_job_as_paid
- 	# attr_accessible :params, :paypal_id, :status, :transaction_id
+ 	attr_accessible :params, :paypal_id, :status, :transaction_id
 
  	private
 
