@@ -25,8 +25,10 @@ class JobsController < ApplicationController
       else
         #he just got signed up
 
-        sign_in(@employer)
-        redirect_to jobpayment_path
+        # sign_in(@employer)
+        # redirect_to jobpayment_path
+
+        render :payment
       end
       
       
@@ -62,9 +64,9 @@ class JobsController < ApplicationController
 
     @applications = JobApplication.all(:select => "job_applications.*, applicants.*", :joins => :applicant, :conditions => "job_id = #{job_id}")
 
+  end
 
-  
-
+  def payment
 
   end
 
@@ -102,13 +104,6 @@ class JobsController < ApplicationController
     #   return true
     # else
     #   redirect_to root_path
-    # end  
-
-  
- 
-
-
-
-    
- 
+    # end
+     
 end

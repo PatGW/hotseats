@@ -36,6 +36,8 @@ Hotseats::Application.routes.draw do
 
   get 'guarantee', to: "info#guarantee"
 
+  get 'jobpayment', to: "jobs#payment"
+
  
   
 
