@@ -1,6 +1,6 @@
 class Job < ActiveRecord::Base
   
-  attr_accessible :title, :location, :description, :info, :employer, :position_type, :employer_attributes
+  attr_accessible :title, :location, :description, :info, :employer, :position_type, :employer_attributes, :jobpaid
 
   
   belongs_to :employer

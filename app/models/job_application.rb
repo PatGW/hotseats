@@ -1,7 +1,7 @@
 class JobApplication < ActiveRecord::Base
   
   
-  attr_accessible :job, :applicant, :cover_letter, :jobpaid
+  attr_accessible :job, :applicant, :cover_letter
   
   
   belongs_to :job
