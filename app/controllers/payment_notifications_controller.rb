@@ -6,7 +6,7 @@ class PaymentNotificationsController < ApplicationController
     render :nothing => true
 
     @job = Job.find(params[:item_number])
-    @job.update_attribute(:jobpaid => true)
+    @job.update_attributes(:jobpaid => true)
 
 
 
