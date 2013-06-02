@@ -5,7 +5,7 @@ class Job < ActiveRecord::Base
   
   belongs_to :employer
   has_many :job_applications
-  
+  has_one :payment_notification
   accepts_nested_attributes_for :employer
   
   
