@@ -15,6 +15,16 @@ class PaymentNotificationsController < ApplicationController
 	    	render :nothing => true	
 	    end
 
+	    if params[:transaction_subject] == "5job"
+	    	employer = Employer.find(@job.employer_id)
+
+	    	employer.update_attributes(:website => "www.itworks.com")
+
+	    	render :nothing => true
+	    else	
+	    	render :nothing => true	
+	    end
+
   
   	end
 
