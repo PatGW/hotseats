@@ -18,7 +18,7 @@ class PaymentNotificationsController < ApplicationController
 	    if params[:transaction_subject] == "5job"
 	    	employer = Employer.find(@job.employer_id)
 	    	current_prepaid = employer.prepaid
-	    	employer.update_attributes(:prepaid => current_prepaid + 4)
+	    	employer.update_attributes(:prepaid => 4)
 
 	    	render :nothing => true
 	    else	
