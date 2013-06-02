@@ -7,7 +7,7 @@ class PaymentNotification < ActiveRecord::Base
  	private
 
  	def mark_job_as_paid
- 		job.update_attribute(:jobpaid => true)
+ 		Job.update_attribute(:jobpaid => true)
  		
  	end	
 end
