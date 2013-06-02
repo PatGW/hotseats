@@ -11,4 +11,4 @@ class PaymentNotification < ActiveRecord::Base
  		job.update_attribute(:jobpaid => true)
  		
  	end	
-7end
+end
