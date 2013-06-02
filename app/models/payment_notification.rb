@@ -7,8 +7,8 @@ class PaymentNotification < ActiveRecord::Base
  	private
 
  	def mark_job_as_paid
- 		# job = Job.find(:job_id)
- 		# job.update_attribute(:jobpaid => true)
+ 		job = Job.find(:job_id)
+ 		job.update_attribute(:jobpaid => true)
  		
  	end	
 end
