@@ -35,7 +35,7 @@ Hotseats::Application.routes.draw do
 
   get 'contact', to: "info#contact"
 
-  get 'blog', to: "info#blog"
+  # get 'blog', to: "info#blog"
 
   get 'employer', to: "info#employer"
 
@@ -44,6 +44,8 @@ Hotseats::Application.routes.draw do
   get 'jobpayment', to: "jobs#payment"
 
   get 'prepaid/:id', to: "jobs#prepaid", as: "prepaid"
+
+  mount Monologue::Engine, at: '/blog' 
  
   
 

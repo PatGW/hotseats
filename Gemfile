@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg'
 
+gem 'monologue', '0.2.0', :path => 'vendor/monologue-0.2.0'
+gem 'tinymce-rails'
+gem 'truncate_html'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
