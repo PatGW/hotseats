@@ -33,7 +33,7 @@ Hotseats::Application.routes.draw do
 
   # put 'approver/:id', to: "admins#update", as: "approver"
 
-  get 'contact', to: "info#contact"
+  # get 'contact', to: "info#contact"
 
   # get 'blog', to: "info#blog"
 
@@ -46,6 +46,9 @@ Hotseats::Application.routes.draw do
   get 'prepaid/:id', to: "jobs#prepaid", as: "prepaid"
 
   mount Monologue::Engine, at: '/blog' 
+
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
  
   
 
