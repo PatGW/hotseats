@@ -9,7 +9,7 @@ class JobsController < ApplicationController
   end
 
   def create
-    @prepaid = current_employer.prepaid
+    
     @job = Job.new params[:job]
     @job.employer = @employer = current_employer || @job.employer
      
@@ -37,7 +37,8 @@ class JobsController < ApplicationController
       render action: :new
     end
     
-    
+  
+
   end
 
 
@@ -72,7 +73,7 @@ class JobsController < ApplicationController
     if current_balance > 0
        @job.update_attributes(:jobpaid => true)
        current_employer.update_attributes(:prepaid => current_balance - 1)
-       @message = "Your Job has been successfully purchased and created"
+       @message = "Your Job has been successfully purchased with prepaid credits and created"
 
     else
        @message = "Error - You have no prepaid job credits"
