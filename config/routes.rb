@@ -43,6 +43,7 @@ Hotseats::Application.routes.draw do
 
   get 'jobpayment', to: "jobs#payment"
 
+  get 'prepaid/:id', to: "jobs#prepaid", as: "prepaid"
  
   
 

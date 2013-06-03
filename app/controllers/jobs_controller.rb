@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   before_filter :employer_signed_in, only: [:myjobs]
   # before_filter :authenticate_employer!, only: [:applications] 
-  before_filter :correct_employer?, only: [:applications] 
+  before_filter :correct_employer?, only: [:applications, :prepaid] 
 
   def new
     @job = Job.new
@@ -9,7 +9,7 @@ class JobsController < ApplicationController
   end
 
   def create
-     
+    @prepaid = current_employer.prepaid
     @job = Job.new params[:job]
     @job.employer = @employer = current_employer || @job.employer
      
@@ -20,7 +20,7 @@ class JobsController < ApplicationController
       @job.save!
       
       if current_employer
-        render action: :created
+        render :payment
         #user gets message thatsw his posting is successfull in it, or you can reditect to the index of all of his postings with redirect_to whatever
       else
         #he just got signed up
@@ -66,9 +66,22 @@ class JobsController < ApplicationController
 
   end
 
-  def payment
+  def prepaid
+    current_balance = current_employer.prepaid
+    @job = Job.find(params[:id])
+    if current_balance > 0
+       @job.update_attributes(:jobpaid => true)
+       current_employer.update_attributes(:prepaid => current_balance - 1)
+       @message = "Your Job has been successfully purchased and created"
+
+    else
+       @message = "Error - You have no prepaid job credits"
+    end 
+
 
   end
+
+
 
   private
 

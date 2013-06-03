@@ -42,5 +42,11 @@ Make Payment for <%= @job.title %> Job listing
 
 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
+Your prepaid Job Balance is:
+<%= @prepaid %>
+
+
+
+<%= link_to 'Pay with prepaid Balance', prepaid_path(@job.id) %>
 
 <%= debug @job %>
