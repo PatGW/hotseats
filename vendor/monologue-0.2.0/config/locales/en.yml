@@ -77,12 +77,12 @@ en:
           saved_with_future_date_and_cache:
             "Blog Post saved: posts with a future publication date will not be shown unless cache is cleared on that same day. Cache will most probably be generated before that and won't be refreshed automatically."
           saved:
-            "Blog Postsaved"
+            "Blog Post saved"
         delete:
           removed:
-            "Monologue removed"
+            "Blog Post removed"
           fail:
-            "Failed to remove monologue!"
+            "Failed to remove Blog post!"
         form:
           title:
             "Title"
