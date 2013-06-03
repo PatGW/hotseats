@@ -1,0 +1,25 @@
+<div id="header">
+        <div id="headercontent" class="container_24">
+            <div id="logo">
+                <%= image_tag("logo.png", :alt => "HotSeats.co Logo") %>
+            </div>
+            <div id="social">
+             
+            </div>
+
+            <div class="clear"></div>
+        
+            <div id="navbar" class="">
+                <ol>
+                  
+                </ol>    
+            </div>
+        </div>  
+    </div>
+
+<%= render @posts %>
+
+
+<% if @page %>
+	<%= render :partial => "pagination" %>
+<% end %>
