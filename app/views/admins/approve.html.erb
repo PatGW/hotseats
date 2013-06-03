@@ -16,7 +16,9 @@
 		<p>
 		<%= na.email %>
 		<p>
-		<%= na.resume %>
+
+		<%= link_to "Curriculum Vitae", "#{na.resume}" %>
+		
 		<p>
 		<%= na.created_at %>
 		<p>
@@ -27,7 +29,7 @@
 
 <%= link_to("approve applicant", ap_path(na.id), :method => :put, :confirm => "are you sure?") %>
 
-
+<p>
 		
 	<% end %>
 <% elsif current_applicant  %>
