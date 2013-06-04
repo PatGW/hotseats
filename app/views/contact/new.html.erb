@@ -1,6 +1,6 @@
 <%= render "layouts/header" %>
 <div id="wrapper" class="container_24">
-  <div id="jobcontainer" class= "grid_17 sidebarline ">
+  <div id="jobcontainer" class= "grid_17">
   <div class="title">
   <h1>Contact Us</h1>
   </div>
@@ -12,16 +12,18 @@
           <p>Call us: <h6>+44 564 565 465</h6></p>
 
           <p>Mailing Address:<h6> HotSeats.co, 1 Baker Street, London, W1U 8EW</h6></p> 
+          <br />
+          <h6> Alternatively, contact us using the form below </h6>
       </div>
-
+  <div id="contactform">
     <%= form_for @message, :url => contact_path do |form| %>
       <fieldset class="fields">
-        <div class="field">
+        <div class="namefield">
           <%= form.label :name %>
           <%= form.text_field :name %>
         </div>
         
-        <div class="field">
+        <div class="emailfield">
           <%= form.label :email %>
           <%= form.text_field :email %>
         </div>
@@ -31,7 +33,7 @@
         </div>
         
         <div class="field">
-          <%= form.label :body %>
+          
           <%= form.text_area :body %>
         </div>
       </fieldset>
@@ -39,9 +41,40 @@
       <fieldset class="actions">
         <%= form.submit "Send" %>
       </fieldset>
-<% end %>
+      <% end %>
+    </div>  
 
   </div>
-</div>
+
+
+<div id="sidebar" class="grid_7">
+      <div class="sidebarheader">
+        <h3>100% Satisfaction Guarantee</h3>
+      </div>
+      <div class="sidebarline"></div>
+      <div class="sidebar_content"> 
+        <p>Post your job on HotSeats.co and if you're
+          not completely satisfied with the results
+          you receive simply contact us for a full
+          and courteous refund</p>
+      </div>
+      <div class="sidebarheader">
+      <h3>A few of the future customers of HotSeats</h3>
+      </div>
+      <div class="sidebarline"></div>
+      <img id="clients" src="images/clients.png">
+      <h3>Post a Job</h3>
+        <div class="sidebarline"></div>
+      <div class="sidebar_content"> 
+        <p>Post a job with HotSeats.co today for guaranteed recruitment satisfaction.</p>
+      </div>
+
+      <div class="redbutton_sidebar">
+        <div class="buttontext">Post Job</div>
+      </div>
+    </div>
+    <div class="clear"></div>
+</div>    
 
 <%= render "layouts/footer" %>
+

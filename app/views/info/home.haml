@@ -24,6 +24,7 @@
       = form_tag "", :method => 'get' do
         = text_field_tag :search, params[:search]
         = submit_tag "Search", :name => nil
+
   #joblist
     - @jobs.each do |job|
       %div{:class => cycle('listing', 'listing_white')}
@@ -40,8 +41,9 @@
           / = link_to job.title, jobs_path(job)
 
         .date_stamp
-          -if current_applicant
-            =link_to "Apply to this job", apply_path(job) unless current_applicant.applied_to?(job) 
+
+          = dateformat job
+           
         
         
         
@@ -65,5 +67,18 @@
       Posting your job on HotSeats.co is easy, affordable and comes with a 100% satisfaction guarantee. Your job will also be seen by hundreds of thousands of passive candidates on FreshGigs.ca partner websites, giving you unprecedented exposure to ensure you find the most qualified candidates.
       %r
         = link_to 'Post Your Job Now', new_jobs_path
+
+#sidebar.grid_7
+.sidebarheader
+%h3 A few of the future customers of HotSeats
+.sidebarline
+%img#clients{:src => "images/clients.png"}/
+%h3 Post a Job
+.sidebarline
+.sidebar_content
+%p Post a job with HotSeats.co today for guaranteed recruitment satisfaction.
+.redbutton_sidebar
+  .buttontext Post Job
+.clear     
 
 = render "layouts/footer"        

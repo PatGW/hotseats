@@ -1,11 +1,13 @@
 <div id="header">
 	<div id="headercontent" class="container_24">
+		<div id= "flash"><%= flash[:notice] %> </div>
 		<div id="logo">
 			<%= image_tag("logo.png", :alt => "HotSeats.co Logo") %>
 		</div>
 		
 		
 		<div id="social">
+			
 			<%- if current_employer %>
 			<%-#= image_tag current_employer.logo.url %>
 			Employers:

@@ -20,6 +20,7 @@ dark red lines: #590202
 body { 
         background-image:url(/assets/background.png);
         background-repeat: repeat;
+       /* border-top: 1px solid black;*/
 
 
 
@@ -35,7 +36,7 @@ a:link {text-decoration: none;}
     -webkit-border-radius: 0 0 8px 8px;
         -moz-border-radius: 0 0 8px 8px;
         border-radius: 0 0 8px 8px;
-        
+        /*border-top: 1px solid black; */       
         behavior: url(/JS/PIE.htc);   
 
 
@@ -46,8 +47,8 @@ a:link {text-decoration: none;}
 #header {
         width: 100%; 
         background-color: #FFFFFF; 
-        height: 120px;
-        border-bottom: 1px solid black;
+        height: auto;
+        /*border-bottom: 1px solid black;*/
 
 }
 
@@ -88,7 +89,7 @@ a:link {text-decoration: none;}
 }
 
 #sidebar {
-        height: 700px;
+        height: auto;
         
 }
 
@@ -140,7 +141,7 @@ a:link {text-decoration: none;}
 #joblist {
 
         background-color: white;
-        height: 1350px;
+        height: auto;
         font-size: 16px;
 }
 
@@ -169,7 +170,7 @@ a:link {text-decoration: none;}
 
 #postjob {grid}
 
-.sidebarline { border-right:  1px solid  #9797A6;}
+.sidebarline { border-left:  1px solid  #9797A6;}
 
 /*********************
         BUTTONS & LINES
@@ -492,3 +493,57 @@ a:link {text-decoration: none;}
 
 }
 
+#flash {
+
+    background-color: #BF0404;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+
+    webkit-border-radius: 0px 0px 8px 8px;
+    -moz-border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 8px 8px;
+        
+    behavior: url(/JS/PIE.htc);   
+}
+
+#contactform {
+    width: 600px;
+    background-color: #f5f3f3;
+
+    webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+        
+    behavior: url(/JS/PIE.htc); 
+    margin-left: 10px;  
+}
+
+#contactform .field {
+
+    text-align: left;
+    margin-left: 20px;
+
+   
+
+
+}
+
+#contactform .emailfield {
+
+    text-align: left;
+    margin-left: 31px;
+
+}
+
+#contactform .namefield {
+
+    text-align: left;
+    margin-left: 28px;
+    padding-top: 20px;
+
+}
+
+#contactform .actions {
+padding-left: 20px;
+    }
