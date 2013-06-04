@@ -621,7 +621,12 @@ background-color: #f5f3f3;
     border: 2px solid #BF0404;
     width: 190px;
     padding-top: 5px;
+    color: black;
+
 }
+
+#approvebutton :link {color:black;}  
+#approvebutton a:visited {color:black;}
 
 #applicantconfirmed {
     text-align: center;
