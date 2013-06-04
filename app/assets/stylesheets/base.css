@@ -467,7 +467,7 @@ a:link {text-decoration: none;}
 
      width: 100%; 
         background-color: #FFFFFF; 
-        height: 118px;
+        height: 113px;
        
 
 
@@ -484,6 +484,7 @@ a:link {text-decoration: none;}
         
     behavior: url(/JS/PIE.htc);   
     padding: 0px 20px;
+    padding-top: 5px;
     border-top: solid 1px gray;
     border-left: solid 1px gray;
     border-right: solid 1px gray;
