@@ -1,36 +1,80 @@
 = render "layouts/header"
 #wrapper.container_24
   #jobcontainer.grid_17
-  
-    %h2 Post a job
-    One Job posting: £109 per Job
-    5 Job Package £99 per Job
+
+    
+
+    .title
+      %h1 Post Your Job
+    .solidline.grid_16
+      .subheader
+        %h4
+          %r Step 1: 
+          Job Option
+      #joboption
+        #joboptionheader
+          #singlejob
+            Single Job
+          #jobpackage
+            5 Job Package 
+          .clearfix
+        #pricesingle
+          £109
+        #price5
+          £99 
+        .clearfix  
+        #perjob
+          per job
+        #perjobleft
+          per job 
+        .clearfix  
+        #total
+          Total price £496
+        #input
+          %input{:name => "1job", :type => "checkbox", :value => "1job"} Select
+        #inputleft
+          %input{:name => "1job", :type => "checkbox", :value => "1job"} Select  
 
 
-    =semantic_form_for @job do |f|
+       
+      .subheader
+        %h4
+          %r Step 2:
+          Job Details
+          #jobdetails
+            =semantic_form_for @job do |f|
 
 
-      =f.inputs "Job" do 
-        =f.input :title
-        =f.input :location
-        =f.input :position_type, as: :select, collection: ["Full-Time", "Contract", "Freelance"]
-        =f.input :description
-        =f.input :info
+              =f.inputs do
+
+                =f.input :title
+                =f.input :location
+                =f.input :position_type, as: :select, collection: ["Full-Time", "Contract", "Freelance"]
+                =f.input :description
+                =f.input :info
+    
+                -unless current_employer 
+                  .subheader
+                  %h4
+                    %r Step 3:
+                    Company Information
+                  =f.semantic_fields_for :employer do |e| 
+                    =e.input :email
+                    =e.input :password
+                    =e.input :password_confirmation
+                    =e.input :name
+                    =e.input :city
+                    =e.input :company_name
+                    =e.input :website
+                    =e.input :logo, as: :file
+                    
+                    
+                =f.submit      
 
 
-      -unless current_employer 
-        =f.semantic_fields_for :employer do |e| 
-          =e.input :email
-          =e.input :password
-          =e.input :password_confirmation
-          =e.input :name
-          =e.input :city
-          =e.input :company_name
-          =e.input :website
-          =e.input :logo, as: :file
-          
-          
-      =f.submit      
+
+
+      
 
 
 
@@ -46,14 +90,14 @@
         and courteous refund
     .sidebarheader
       %h3 A few of the future customers of HotSeats
-    .sidebarline
-    %img#clients{:src => "images/clients.png"}
+    
+      = image_tag("clients.png", :alt => "clients")
       %h3 Post a Job
       .sidebarline
       .sidebar_content
         %p Post a job with HotSeats.co today for guaranteed recruitment satisfaction.
       .redbutton_sidebar
-        .buttontext Post Job
+        .buttontext= link_to 'Post Job', new_jobs_path
   .clear   
 
   = render "layouts/footer"   

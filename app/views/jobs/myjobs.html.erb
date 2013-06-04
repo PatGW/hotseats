@@ -1,24 +1,30 @@
+<%= render "layouts/header" %>
+<div id="wrapper" class="container_24">
 
-<% if is_employer? == true %> 
+	<% if is_employer? == true %> 
+<div id= "pagetitle">	
+	<h2> Your Job Posts </h2>
+</div>
+	<% @employerjobs.each do |job| %>
+	<div id="joblistingbox">
+		<h4> <%= link_to job.title, viewjob_path(job) %> </h4>
+		 <p> 
+		 <%= job.location %>
+		 <p>
+		 <h6><%= link_to "View applications", viewapplications_path(job) %></h6>
+		 <p>
+	</div>	 	
+		<% end %> 	
+		 
 
-you are employer <p>
 
-<% @employerjobs.each do |job| %>
-	 <%= link_to job.title, viewjob_path(job) %>
-	 <p> 
-	 <%= job.location %>
-	 <p>
-	 <%= link_to "view applications", viewapplications_path(job) %>
-	 <p>
-	<% end %> 	
-	 
+			<% else %>
 
+			you are not an employer
 
-<% else %>
+			<% end %>
 
-you are not an employer
-
-<% end %>
+		
 
 <%= render "layouts/footer" %>
 

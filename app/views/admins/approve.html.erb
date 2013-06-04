@@ -1,24 +1,33 @@
-	
+<%= render "layouts/header" %>
+<div id="wrapper" class="container_24">	
+<div id= "pagetitle">	
+	<h2>Approve Job Seeker Profiles</h2>
+</div>
+
 <% if is_admin? == true %>
 
 
-<%= debug @notapproved %>
-
-<h1> Applicants awaiting approval </h1>
-
 	<% @notapproved.each do |na| %>
-
+	<div id="approvalbox">
+		<h6>Applicant name:</h6>
+		<p>
+	
 		<%= na.name %> 
+		<p>
+		<h6>Location:</h6>
 		<p>
 		<%= na.city %> 
 		<p>
 		<%= na.website %>
 		<p>
+		<h6>Email:</h6>
+		<p>
 		<%= na.email %>
 		<p>
-
-		<%= link_to "Curriculum Vitae", "#{na.resume}" %>
-		
+		<h6>Resume:</h6>
+		<p>
+		<%= link_to "Curriculum Vitae Download", "#{na.resume}" %>
+		<h6>Account created date</h6>
 		<p>
 		<%= na.created_at %>
 		<p>
@@ -26,12 +35,13 @@
 		
 	
 
+		<div id= "approvebutton">
+		<h5><%= link_to("Approve Job Seeker", ap_path(na.id), :method => :put, :confirm => "Are you sure you want to approve this Job Seeker?") %></h5>
+		</div>
 
-<%= link_to("approve applicant", ap_path(na.id), :method => :put, :confirm => "are you sure?") %>
-
-<p>
-		
+	</div>	
 	<% end %>
+
 <% elsif current_applicant  %>
 	Not Authorised - You are an applicant
 	<% else %>

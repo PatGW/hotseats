@@ -73,13 +73,14 @@
 .sidebarheader
 %h3 A few of the future customers of HotSeats
 .sidebarline
-%img#clients{:src => "images/clients.png"}/
+%img#clients= image_tag("clients.png", :alt => "clients")
+
 %h3 Post a Job
 .sidebarline
 .sidebar_content
 %p Post a job with HotSeats.co today for guaranteed recruitment satisfaction.
 .redbutton_sidebar
-  .buttontext Post Job
+  .buttontext= link_to 'Post Job', new_jobs_path
 .clear     
 
 = render "layouts/footer"        

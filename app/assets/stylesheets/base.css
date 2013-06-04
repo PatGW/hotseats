@@ -22,11 +22,10 @@ body {
         background-repeat: repeat;
        /* border-top: 1px solid black;*/
 
-
-
 }
 
-a:link {text-decoration: none;}
+a:link {color:white; text-decoration: none;}
+a:visited {color:white; text-decoration: none;}
 
 #wrapper { 
         background-color: #FFFFFF;
@@ -65,7 +64,7 @@ a:link {text-decoration: none;}
         
         behavior: url(/JS/PIE.htc);
 
-        
+        font-size: 16px;
         background-color: #BF0404;
         height: 40px;
         bottom: 0px;
@@ -90,6 +89,10 @@ a:link {text-decoration: none;}
         font-size: 15px;
 }
 
+
+#pagination  :link {color:black;}  
+#pagination  a:visited {color:black;}
+
 #sidebar {
         height: auto;
         
@@ -108,9 +111,18 @@ a:link {text-decoration: none;}
 }
 
 #searchbar {
-
+        padding-left: 30px;
         height: 30px;
         margin: 18px;
+        width: 600px;
+        background-color: #F5F3F3;
+        padding-top: 3px;
+        
+}
+
+#searchbar input[name=search]{
+
+       width: 500px;
         
 }
 
@@ -135,6 +147,9 @@ a:link {text-decoration: none;}
 
 #social { float: right; margin-top: 40px; margin-right: 20px; }
 
+#social :link {color:gray;}      /* unvisited link */
+#social a:visited {color:gray;}
+
 .space{ height: 50px;}
 
 /*********************
@@ -145,7 +160,13 @@ a:link {text-decoration: none;}
         background-color: white;
         height: auto;
         font-size: 16px;
+
+
 }
+
+#joblist :link {color:black;}  
+#joblist a:visited {color:black;}
+
 
 .listing {
         border-top: 1px dashed #8C0202;
@@ -257,6 +278,7 @@ a:link {text-decoration: none;}
 
         display: inline;
         color: #FFFFFF;
+        font-size: 16px;
 }
 
 
@@ -381,9 +403,8 @@ a:link {text-decoration: none;}
                 Employers
 *********************/
 
-/*.employerscontent{ float: right; border: 1px solid black;}
+.employerscontent h2 { line-height: 30px; }
 
-.employersclients{ float: left; border: 1px solid black;}*/
 
 .employerstitle { text-align: center; margin-top: 20px; margin-bottom: 40px;}
 
@@ -550,7 +571,7 @@ a:link {text-decoration: none;}
     padding-left: 20px;
 }
 
-#viewapplicantstitle {
+#pagetitle {
 
     padding-top: 10px;
      padding-left: 20px;
@@ -559,9 +580,163 @@ a:link {text-decoration: none;}
 
 #applicantbox {
 
-     background-color: #f5f3f3;
-     padding-left: 20px;
+background-color: #f5f3f3;
+     margin-left: 20px;
+     margin-right: 20px;
      margin-bottom: 20px;
+    
+     padding-left: 10px;
 
+
+}
+
+#joblistingbox {
+
+    background-color: #f5f3f3;
+     margin-left: 20px;
+     margin-right: 20px;
+     margin-bottom: 20px;
+     padding-top: 10px;
+     padding-left: 10px;
+     padding-bottom: 10px;
+     
+
+}
+
+#approvalbox {
+
+    background-color: #f5f3f3;
+     margin-left: 20px;
+     margin-right: 20px;
+     margin-bottom: 20px;
+     padding-top: 10px;
+     padding-left: 10px;
+     padding-bottom: 10px;
+     
+
+}
+
+#approvebutton {
+
+    border: 2px solid #BF0404;
+    width: 190px;
+    padding-top: 5px;
+}
+
+#applicantconfirmed {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#viewjob {
+
+    padding-left: 20px;  
+     
+    margin-bottom: 20px;
+    background-color: #f5f3f3;
+
+
+    webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+        
+    behavior: url(/JS/PIE.htc); 
+    margin-left: 10px;  
+    min-height: 560px;
+}
+
+/*********************
+     Post Job
+*********************/
+
+#joboption {
+
+    background-color: #F5F3F3;
+    height: 200px;
+    border: 1px solid #9797A6;
+}
+
+#singlejob {
+
+    float: left;
+    margin-left: 140px;
+    margin-right: 180px;
+    margin-top: 5px;
+    color: white;
+
+}
+
+#jobpackage {
+
+    color: white;
+    margin-top: 5px;
+}
+
+
+#pricesingle {
+
+    float: left;
+    margin-left: 110px;
+    font-size: 45px;
+    margin-top: 50px;
+    font-style: bold;
+}
+
+#price5 {
+
+    float: left;
+    margin-left: 170px;
+    font-size: 45px;
+    margin-top: 50px;
+}
+
+#joboptionheader {
+
+    background-color: #BF0404;
+    border: 1px solid #9797A6;
+    height: 30px;
+}
+
+#perjob {
+
+    float: left;
+    margin-left: 145px;
+    margin-top: 20px;
+}
+
+#perjobleft {
+
+    float: left;
+     margin-left: 225px;
+    margin-top: 20px;
+}
+
+#total {
+
+    float: right;
+    margin-right: 135px;
+}
+
+#jobdetails {
+
+    background-color: #F5F3F3;
+    height: auto;
+    border: 1px solid #9797A6;
+
+}
+
+#input {
+    float: left;
+    margin-left: 135px;
+    margin-top: 23px;
+
+
+}
+
+#inputleft {
+
+float: left;
+margin-left: 210px;
+margin-top: 7px;
 
 }

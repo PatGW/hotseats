@@ -12,7 +12,8 @@ body {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
-#header a:link  { color: white; }
+
+a:link  { color: white; }
 
 pre,
 code {

@@ -1,57 +1,62 @@
-job payment page
-<p>
-Make Payment for <%= @job.title %> Job listing
+<%= render "layouts/header" %>
+<div id="wrapper" class="container_24">
+	<div id="jobcontainer" class= "grid_24 ">
+		<h3>Make Payment for <%= @job.title %> Job listing</h3>
+
+		1 Job Listing
+		<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_xclick">
+		<input type="hidden" name="business" value="U4SS4RW266ML8">
+		<input type="hidden" name="lc" value="GB">
+		<input type="hidden" name="item_name" value="HotSeats Job Listings">
+		<input type="hidden" name="item_number" value= "<%= @job.id %>">
+		<input type="hidden" name="amount" value="109.00">
+		<input type="hidden" name="currency_code" value="GBP">
+		<input type="hidden" name="button_subtype" value="services">
+		<input type="hidden" name="no_note" value="1">
+		<input type="hidden" name="no_shipping" value="1">
+		<input type="hidden" name="custom" value="1job">
+		<input type="hidden" name="notify_url" value="<%= pn_url %>">
+		<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
+		<input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+		<img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+		</form>
+		<!-- 
+		 "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
+		 -->
+
+		 5 Job Listing
+		<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_xclick">
+		<input type="hidden" name="business" value="U4SS4RW266ML8">
+		<input type="hidden" name="lc" value="GB">
+		<input type="hidden" name="item_name" value="Five HotSeats Job Listings">
+		<input type="hidden" name="item_number" value= "<%= @job.id %>">
+		<input type="hidden" name="amount" value="496.00">
+		<input type="hidden" name="currency_code" value="GBP">
+		<input type="hidden" name="button_subtype" value="services">
+		<input type="hidden" name="no_note" value="1">
+		<input type="hidden" name="no_shipping" value="1">
+		<input type="hidden" name="custom" value="5job">
+		<input type="hidden" name="notify_url" value="<%= pn_url %>">
+		<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
+		<input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+
+		<img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+		</form>
 
 
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="U4SS4RW266ML8">
-<input type="hidden" name="lc" value="GB">
-<input type="hidden" name="item_name" value="HotSeats Job Listings">
-<input type="hidden" name="item_number" value= "<%= @job.id %>">
-<input type="hidden" name="amount" value="109.00">
-<input type="hidden" name="currency_code" value="GBP">
-<input type="hidden" name="button_subtype" value="services">
-<input type="hidden" name="no_note" value="1">
-<input type="hidden" name="no_shipping" value="1">
-<input type="hidden" name="custom" value="1job">
-<input type="hidden" name="notify_url" value="<%= pn_url %>">
-<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
-<input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-<img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-</form>
-<!-- 
- "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
- -->
 
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="U4SS4RW266ML8">
-<input type="hidden" name="lc" value="GB">
-<input type="hidden" name="item_name" value="Five HotSeats Job Listings">
-<input type="hidden" name="item_number" value= "<%= @job.id %>">
-<input type="hidden" name="amount" value="496.00">
-<input type="hidden" name="currency_code" value="GBP">
-<input type="hidden" name="button_subtype" value="services">
-<input type="hidden" name="no_note" value="1">
-<input type="hidden" name="no_shipping" value="1">
-<input type="hidden" name="custom" value="5job">
-<input type="hidden" name="notify_url" value="<%= pn_url %>">
-<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
-<input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+		<% if current_employer %>
+			Your prepaid Job Balance is:
+			<%= current_employer.prepaid  %>
+			<% if current_employer.prepaid > 0 %>
 
-<img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-</form>
+			<%= link_to 'Pay with prepaid Balance', prepaid_path(@job.id) %>
+			<% end %>
+		<% end %>		
 
+	</div>
+</div>
 
-
-<% if current_employer %>
-	Your prepaid Job Balance is:
-	<%= current_employer.prepaid  %>
-	<% if current_employer.prepaid > 0 %>
-
-	<%= link_to 'Pay with prepaid Balance', prepaid_path(@job.id) %>
-	<% end %>
-<% end %>		
-
-<%= debug @job %>
+<%= render "layouts/footer" %>

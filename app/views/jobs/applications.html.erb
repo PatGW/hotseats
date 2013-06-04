@@ -1,6 +1,6 @@
 <%= render "layouts/header" %>
 <div id="wrapper" class="container_24">
-<div id= "viewapplicantstitle">	
+<div id= "pagetitle">	
 	<h2><%= @job.title %> applicants:</h2>
 </div>
 
@@ -28,7 +28,7 @@
 	 <p>
 	 <h6>Resume:</h6>
 
-	 <%= link_to "Curriculum Vitae", "#{app.resume}" %>
+	 <%= link_to "Curriculum Vitae Download", "#{app.resume}" %>
 	 <p> 
 	<h6>Applied date</h6>
 	 <p> 

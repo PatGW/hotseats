@@ -62,7 +62,7 @@
       <h3>A few of the future customers of HotSeats</h3>
       </div>
       <div class="sidebarline"></div>
-      <img id="clients" src="images/clients.png">
+      <%= image_tag("clients.png", :alt => "clients") %>
       <h3>Post a Job</h3>
         <div class="sidebarline"></div>
       <div class="sidebar_content"> 
@@ -70,7 +70,7 @@
       </div>
 
       <div class="redbutton_sidebar">
-        <div class="buttontext">Post Job</div>
+        <div class="buttontext"><%= link_to "Post job", new_jobs_path %></div>
       </div>
     </div>
     <div class="clear"></div>
