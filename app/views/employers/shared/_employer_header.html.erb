@@ -1,0 +1,49 @@
+<div id="sessionsheader">
+	<div id="sessions_header_content" class="container_24">
+
+		
+			<div id="logo">
+				<%= image_tag("logo.png", :alt => "HotSeats.co Logo") %>
+			</div>
+			
+			
+			<div id="social">
+				<%- if current_employer %>
+				<%-#= image_tag current_employer.logo.url %>
+				Employers:
+				<%= link_to "My Jobs", myjobs_path %>
+				<%= link_to "Logout", destroy_employer_session_path, :method=>:delete %>
+			<%- else %>
+				
+			<%- end%>
+			
+
+
+			<%- unless current_employer %>
+				<%- if current_applicant %>
+				
+					<%= link_to "Logout", destroy_applicant_session_path, :method=>:delete %>
+				<%- else %>
+				Job Seekers:
+					<%= link_to "Login", new_applicant_session_path  %>
+					<%= link_to "Signup", new_applicant_registration_path  %>
+			
+				<%- end%>
+				
+			<%-end%>
+
+			<%= link_to image_tag("facebook.png", :alt => "facebook small logo"), 'http://www.facebook.com' %>
+			<%= link_to image_tag("twitter.png", :alt => "facebook small logo"), 'http://www.twitter.com' %>
+			<%= link_to image_tag("google-plus.png", :alt => "facebook small logo"), 'http://plus.google.com/' %>
+				
+				</div>
+				<div class="clear"></div>
+				
+			<div id ="logintitle" class = "grid_18 push_3">
+				<h2>Employers Sign In</h2>
+			</div>
+		
+</div>		
+
+	
+	</div>
