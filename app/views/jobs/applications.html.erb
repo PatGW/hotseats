@@ -1,48 +1,45 @@
-this jobs' applications
-
-
-
-<%= debug current_employer.id %>
-
-<%= debug @job.employer_id %>
-
-
-
-
-
+<%= render "layouts/header" %>
+<div id="wrapper" class="container_24">
+<div id= "viewapplicantstitle">	
+	<h2><%= @job.title %> applicants:</h2>
+</div>
 
 <% @applications.each do |app| %>
+<div id="applicantbox">
+	<p>
+	<h6>Applicant name:</h6>
+	<p>
+	 <%= app.name %>
+	 <p> 
+	 <h6>Email:</h6>
+	 <p>
+	 
+	<%= app.email %>
+	 <p> 
 
- <p> 
- Email:
- <p>
+	 <p> 
+	 <h6>Location:</h6>
+	 <p>
+	 <%= app.city %>
+	 <p>
+	 <h6>Website:</h6>
+	 <p>
+	 <%= app.website %>
+	 <p>
+	 <h6>Resume:</h6>
+
+	 <%= link_to "Curriculum Vitae", "#{app.resume}" %>
+	 <p> 
+	<h6>Applied date</h6>
+	 <p> 
+	 <%= app.created_at %>
+
+</div>	
  
- <%= app.email %>
- <p> 
- Applicant name:
-<p>
- <%= app.name %>
- <p> 
- Location:
- <p>
- <%= app.city %>
- <p>
- Website:
- <p>
- <%= app.website %>
- <p>
- Resume:
-
- <%= link_to "Curriculum Vitae", "#{app.resume}" %>
- <p> 
-Applied date/time:
-
- <%= app.created_at %>
-
-
-
 
  <% end %>
+
+ <%= render "layouts/footer" %>
 
 
 
