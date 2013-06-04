@@ -5,7 +5,7 @@ class Employer < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :city, :company_name, :website, :logo, :prepaid
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :city, :company_name, :website, :logo, :prepaid, :admin
   # attr_accessible :title, :body
   
   mount_uploader :logo, LogoUploader
