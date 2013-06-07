@@ -702,6 +702,35 @@ background-color: #f5f3f3;
     height: 30px;
 }
 
+#jobdetailsheader {
+
+    background-color: #BF0404;
+    border: 1px solid #9797A6;
+    height: 30px;
+
+}
+
+#companyinfoheader {
+
+    background-color: #BF0404;
+    border: 1px solid #9797A6;
+    height: 30px;
+    margin-top: 10px;
+
+}
+
+#jobdetailstext {
+
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+
+
+}
+
+
 #perjob {
 
     float: left;
@@ -712,21 +741,23 @@ background-color: #f5f3f3;
 #perjobleft {
 
     float: left;
-     margin-left: 225px;
-    margin-top: 20px;
+    margin-left: 215px;
+    margin-top: 17px;
 }
 
 #total {
 
     float: right;
-    margin-right: 135px;
+    margin-right: 155px;
 }
 
 #jobdetails {
 
+    margin-top: 10px;
     background-color: #F5F3F3;
     height: auto;
-    border: 1px solid #9797A6;
+    
+    
 
 }
 
@@ -741,7 +772,141 @@ background-color: #f5f3f3;
 #inputleft {
 
 float: left;
-margin-left: 210px;
+margin-left: 200px;
 margin-top: 7px;
 
+}
+
+#job_title_input {
+
+    margin-left: 20px; 
+    margin-top: 20px;
+    width: 380px;
+   
+   
+}
+
+#job_title {
+
+    line-height: 25px;
+    width: 360px;
+}
+
+#job_location {
+
+    line-height: 25px;
+    width: 190px;
+}
+
+#job_location_input {
+
+   
+    margin-top: -77px;
+    margin-left: 410px;
+     
+    width: 200px;
+
+}
+
+#job_position_type_input {
+
+    margin-left: 20px; 
+    margin-top: 20px;
+   
+    width: 400px;
+}
+
+#job_description_input {
+
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 600px;
+    
+
+}
+
+#job_info_input {
+
+    margin-top: 20px; 
+    width: 600px;
+    margin-left: 20px;
+    
+   
+}
+
+label[for=job_employer_attributes_email],
+label[for=job_employer_attributes_password],
+label[for=job_employer_attributes_name],
+label[for=job_employer_attributes_city],
+label[for=job_employer_attributes_company_name],
+label[for=job_employer_attributes_password_confirmation],
+label[for=job_employer_attributes_website],
+label[for=job_employer_attributes_logo] {
+
+    padding-left: 20px;
+}
+
+#jobcreatebutton {
+
+    padding-left: 262px;
+    
+    width: 360px;
+   /* border: 1px solid black;*/
+    height: 26px;
+    background-color: #BF0404;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#one_job_payment {
+    margin-top: 10px;
+    float: left;
+    margin-left: 230px;
+    margin-right: 230px;
+    background-color: #BF0404;
+    margin-bottom: 20px;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+        
+    behavior: url(/JS/PIE.htc); 
+
+
+
+}
+
+#five_job_payment {
+
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #BF0404;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+        
+    behavior: url(/JS/PIE.htc); 
+
+
+
+}
+
+#make_payment_title {
+    margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.paypalbutton {
+
+    margin-left: 10px;
+}
+
+.paypalbutton2 {
+
+    margin-left: 20px;
 }

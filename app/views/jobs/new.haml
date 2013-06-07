@@ -42,22 +42,28 @@
           %r Step 2:
           Job Details
           #jobdetails
+            #jobdetailsheader
+              #jobdetailstext
+                Job Details
             =semantic_form_for @job do |f|
 
 
               =f.inputs do
 
-                =f.input :title
+                =f.input :title ,:label => "Job Title"
                 =f.input :location
                 =f.input :position_type, as: :select, collection: ["Full-Time", "Contract", "Freelance"]
-                =f.input :description
-                =f.input :info
+                =f.input :description ,:label => "Job Description"
+                =f.input :info ,:label => "How to Apply"
     
                 -unless current_employer 
                   .subheader
                   %h4
                     %r Step 3:
                     Company Information
+                    #companyinfoheader
+                      #jobdetailstext
+                        Company Information
                   =f.semantic_fields_for :employer do |e| 
                     =e.input :email
                     =e.input :password
@@ -68,8 +74,8 @@
                     =e.input :website
                     =e.input :logo, as: :file
                     
-                    
-                =f.submit      
+                #jobcreatebutton      
+                  =f.action :submit, :as => :button     
 
 
 
@@ -78,6 +84,7 @@
 
 
 
+  #ssdfsdf
   #sidebar.grid_7
     .sidebarheader
       %h3 100% Satisfaction Guarantee
