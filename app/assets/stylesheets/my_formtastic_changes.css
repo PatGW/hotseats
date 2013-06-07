@@ -1,0 +1,17 @@
+
+.formtastic .input {
+  overflow:hidden; /* clear containing floats */
+  padding:0.5em 0; /* padding and negative margin juggling is for Firefox */
+  margin-top:-0.5em;
+  margin-bottom:1em;
+}
+
+
+.formtastic .stringish input {
+  width:50%;
+}
+
+.formtastic input {
+
+  line-height: 20px;
+}
