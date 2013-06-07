@@ -756,6 +756,7 @@ background-color: #f5f3f3;
     margin-top: 10px;
     background-color: #F5F3F3;
     height: auto;
+    border: 1px solid #9797A6;
     
     
 
@@ -850,7 +851,7 @@ label[for=job_employer_attributes_logo] {
 
     padding-left: 262px;
     
-    width: 360px;
+    width: 362px;
    /* border: 1px solid black;*/
     height: 26px;
     background-color: #BF0404;
