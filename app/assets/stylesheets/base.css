@@ -12,8 +12,6 @@ dark red lines: #590202
 
 */
 
-
-
 /*********************
      LAYOUT
 *********************/
@@ -90,7 +88,7 @@ a:visited {color:white; text-decoration: none;}
 }
 
 
-#pagination  :link {color:black;}  
+#pagination  a:link {color:black;}  
 #pagination  a:visited {color:black;}
 
 #sidebar {
@@ -136,9 +134,6 @@ a:visited {color:white; text-decoration: none;}
         
         behavior: url(/JS/PIE.htc);
 
-
-
-
 }
 
 #jobcontainer { margin-right:  4px; background-color: white;}
@@ -149,6 +144,7 @@ a:visited {color:white; text-decoration: none;}
 
 #social :link {color:gray;}      /* unvisited link */
 #social a:visited {color:gray;}
+#social a:hover { text-decoration: underline;}
 
 .space{ height: 50px;}
 
@@ -433,8 +429,6 @@ a:visited {color:white; text-decoration: none;}
 .redline_gua {
 
         border-top: 1px dashed #8C0202;
-
-
 }
 
 .guatitle { text-align: center; margin-top: 20px;}
@@ -909,5 +903,25 @@ label[for=job_employer_attributes_logo] {
 
 .paypalbutton2 {
 
+    margin-left: 10px;
+}
+#link_container {
+
     margin-left: 20px;
 }
+
+#link_container a:link {
+
+    color: black;
+}
+
+#link_container a:visited {
+
+    color: black;
+}
+
+#link_container a:hover {
+
+    text-decoration: underline;
+}
+

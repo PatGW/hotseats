@@ -1,6 +1,10 @@
-<div id="sessionsheader">
+ <div id="sessionsheader">
 	<div id="sessions_header_content" class="container_24">
-		<div id= "flash"><%= flash[:notice] %> </div>
+			<div id= "flash">
+				<%- flash.each do |name, msg| -%>
+				    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+				<%- end -%>  
+			</div> 		
 			<div id="logo">
 				<%= image_tag("logo.png", :alt => "HotSeats.co Logo") %>
 			</div>
@@ -34,14 +38,14 @@
 			<%= link_to image_tag("twitter.png", :alt => "facebook small logo"), 'http://www.twitter.com' %>
 			<%= link_to image_tag("google-plus.png", :alt => "facebook small logo"), 'http://plus.google.com/' %>
 				
-				</div>
+			</div>
 				<div class="clear"></div>
 				
 			<div id ="logintitle" class = "grid_18 push_3">
 				<h2>Employers Sign In</h2>
 			</div>
 		
-</div>		
+	</div>		
 
 	
-	</div>
+</div>
