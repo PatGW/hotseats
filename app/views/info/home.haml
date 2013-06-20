@@ -15,7 +15,6 @@
       .buttontext= link_to 'Post Job Now', new_jobs_path
   .piclist
     %ol
-      %li Trusted by over 300 UK Employers
       %li Access a qualified applicant pool more quickly
       %li Get the results you want or your money back
 #jobcontainer.grid_17
@@ -56,20 +55,23 @@
       Whether you are looking for a professional in Marketing, Public Relations, Social Media, Branding, Design, SEO/SEM, Communications or Copywriting - HotSeats.co is the place to find them.
       %br/
       %br/
-      Posting your job on HotSeats.co is easy, affordable and comes with a 100% satisfaction guarantee. Your job will also be seen by hundreds of thousands of passive candidates on FreshGigs.ca partner websites, giving you unprecedented exposure to ensure you find the most qualified candidates.
+      Posting your job on HotSeats.co is easy, affordable and comes with a 100% satisfaction guarantee. Your job will also be seen by hundreds of thousands of passive candidates on HotSeats.co partner websites, giving you unprecedented exposure to ensure you find the most qualified candidates.
       %r
         = link_to 'Post Your Job Now', new_jobs_path
 
 #sidebar.grid_7
-.sidebarheader
-%h3 A few of the future customers of HotSeats
-.sidebarline
-%img#clients= image_tag("clients.png", :alt => "clients")
-
-%h3 Post a Job
-.sidebarline
-.sidebar_content
-%p Post a job with HotSeats.co today for guaranteed recruitment satisfaction.
+  .sidebarheader
+  %h3 "My CV was one of the best CVs the company had ever seen."
+.sidebarline.grid_7
+.sidebar_content.grid_7
+  .redlink
+    %p
+      Receive a full report on your CV's strengths and weaknesses #{link_to 'CLICK HERE', "http://www.careerconsultants.co.uk/find-me-a-job/cv-assessment/" }
+.sidebar_content.grid_7
+  %h3 Post a Job
+  .sidebarline
+.sidebar_content.grid_7
+  %p Post a job with HotSeats.co today for guaranteed recruitment satisfaction.
 .redbutton_sidebar
   .buttontext= link_to 'Post Job', new_jobs_path
 .clear     
