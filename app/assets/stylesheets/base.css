@@ -616,8 +616,17 @@ background-color: #f5f3f3;
 
 }
 
+
+#approvebutton h5 {
+
+   text-align: center;
+}
+
 #approvebutton :link {color:black;}  
 #approvebutton a:visited {color:black;}
+
+#approvalbox :link {color:black;}  
+#approvalbox a:visited {color:black;}
 
 #applicantconfirmed {
     text-align: center;
