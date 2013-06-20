@@ -1,6 +1,5 @@
 class JobsController < ApplicationController
   before_filter :employer_signed_in, only: [:myjobs]
-  # before_filter :authenticate_employer!, only: [:applications] 
   before_filter :correct_employer?, only: [:applications, :prepaid] 
 
   def new
@@ -12,35 +11,21 @@ class JobsController < ApplicationController
     
     @job = Job.new params[:job]
     @job.employer = @employer = current_employer || @job.employer
-     
-    
-    
-    
+
     if @job.valid? && @employer.valid?
       @job.save!
       
       if current_employer
         render :payment
-        #user gets message thatsw his posting is successfull in it, or you can reditect to the index of all of his postings with redirect_to whatever
+       
       else
-        #he just got signed up
-
-        # sign_in(@employer)
-        # redirect_to jobpayment_path
-
+        
         render :payment
-      end
-      
-      
-      
+      end    
     else
       render action: :new
     end
-    
-  
-
   end
-
 
   def show
 
@@ -48,14 +33,11 @@ class JobsController < ApplicationController
 
   end 
 
- 
-
   def myjobs
     
     @employerjobs = current_employer.jobs
  
   end  
-
 
   def applications
 
@@ -82,8 +64,6 @@ class JobsController < ApplicationController
 
   end
 
-
-
   private
 
   def employer_signed_in
@@ -100,8 +80,6 @@ class JobsController < ApplicationController
     
        @job = Job.find(params[:id])
 
-       # @employer = Employer.find(@job.employer_id)
-
        if current_employer.id == @job.employer_id
 
           return true
@@ -110,14 +88,7 @@ class JobsController < ApplicationController
 
         redirect_to root_path
 
-        end
+      end
   end      
-
-    # if current_employer.id == params[:id]
-
-    #   return true
-    # else
-    #   redirect_to root_path
-    # end
-     
+    
 end

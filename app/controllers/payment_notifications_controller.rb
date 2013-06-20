@@ -9,9 +9,7 @@ class PaymentNotificationsController < ApplicationController
 	   	 	@job = Job.find(params[:item_number])
 	    	@job.update_attributes(:jobpaid => true)
 
-	    	
-
-	    else
+	    	else
 	    		
 	    end
 
@@ -25,12 +23,10 @@ class PaymentNotificationsController < ApplicationController
 	    	employer.update_attributes(:prepaid => current_prepaid + 4)
 
 	    	
-	    else	
+	   	 else	
 	    	
 	    end
 	    render :nothing => true	
 	  
-  	end
-
-  
+  	end 
 end

@@ -6,13 +6,11 @@
 				<%- end -%>  
 			</div> 	
 			<div id="logo">
-				<%= image_tag("logo.png", :alt => "HotSeats.co Logo") %>
+				<%= link_to image_tag("logo.png", :alt => "HotSeats.co Logo"), root_path %>
 			</div>
-			
 			
 			<div id="social">
 				<%- if current_employer %>
-				<%-#= image_tag current_employer.logo.url %>
 				Employers:
 				<%= link_to "My Jobs", myjobs_path %>
 				<%= link_to "Logout", destroy_employer_session_path, :method=>:delete %>
@@ -20,8 +18,6 @@
 				
 			<%- end%>
 			
-
-
 			<%- unless current_employer %>
 				<%- if current_applicant %>
 				
@@ -45,8 +41,5 @@
 			<div id ="logintitle" class = "grid_18 push_3">
 				<h2>Job Seekers Sign Up</h2>
 			</div>
-		
-</div>		
-
-	
-	</div>
+	</div>		
+</div>

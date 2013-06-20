@@ -39,5 +39,7 @@ Hotseats::Application.configure do
   
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
-  
+  ENV['aws_access_key_id'] = "AKIAJU4VT7GOBMAASWHQ";
+  ENV['aws_secret_access_key'] = "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";
+
 end
