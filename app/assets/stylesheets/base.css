@@ -316,6 +316,8 @@ a:visited {color:white; text-decoration: none;}
                 TEXT
 *********************/
 
+h3 {line-height: 20px;}
+
 #herotitle {
 
         padding:  10px 100px;

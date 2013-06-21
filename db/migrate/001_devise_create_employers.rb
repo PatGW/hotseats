@@ -39,7 +39,7 @@ class DeviseCreateEmployers < ActiveRecord::Migration
       t.string :city, null: false
       t.string :company_name, null: false
       t.string :website
-      t.boolean :admin, null: false, :default => 0
+      t.boolean :admin, null: false, :default => 'f'
       
       t.string :logo
       

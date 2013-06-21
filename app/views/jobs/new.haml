@@ -72,35 +72,30 @@
                     
                 #jobcreatebutton      
                   =f.action :submit, :as => :button     
-
-
-
-
-      
-
-
-
-  #ssdfsdf
   #sidebar.grid_7
     .sidebarheader
       %h3 100% Satisfaction Guarantee
     .sidebarline
-    .sidebar_content
-      %p
-        Post your job on HotSeats.co and if you're
-        not completely satisfied with the results
-        you receive simply contact us for a full
-        and courteous refund
+  .sidebar_content.grid_7
+    %p
+      Post your job on HotSeats.co and if you're
+      not completely satisfied with the results
+      you receive simply contact us for a full
+      and courteous refund
     .sidebarheader
-      %h3 A few of the future customers of HotSeats
-    
-      = image_tag("clients.png", :alt => "clients")
-      %h3 Post a Job
+      %h3 "My CV was one of the best CVs the company had ever seen."
       .sidebarline
-      .sidebar_content
-        %p Post a job with HotSeats.co today for guaranteed recruitment satisfaction.
-      .redbutton_sidebar
-        .buttontext= link_to 'Post Job', new_jobs_path
+  
+  .redlink.grid_7
+    %p
+    Receive a full report on your CV's strengths and weaknesses #{link_to 'CLICK HERE', "http://www.careerconsultants.co.uk/find-me-a-job/cv-assessment/" }  
+  .sidebar_content.grid_7
+    %h3 Post a Job
+    .sidebarline
+    .sidebar_content
+      %p Post a job with HotSeats.co today for guaranteed recruitment satisfaction.
+    .redbutton_sidebar
+      .buttontext= link_to 'Post Job', new_jobs_path
   .clear   
 
   = render "layouts/footer"   
