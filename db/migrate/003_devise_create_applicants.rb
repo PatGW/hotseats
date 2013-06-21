@@ -40,7 +40,7 @@ class DeviseCreateApplicants < ActiveRecord::Migration
       t.string :description
       
       t.string :resume
-      t.boolean :approved, null: false, :default => 0
+      t.boolean :approved, null: false, :default => 'f'
       
       t.timestamps
     end
