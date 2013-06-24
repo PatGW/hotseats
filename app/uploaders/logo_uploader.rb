@@ -37,7 +37,7 @@ class LogoUploader < CarrierWave::Uploader::Base
 
 
   # Process files as they are uploaded:
-  process :resize_to_fill => [200, 200]
+  process :resize_to_fit => [300, 400]
   
   # def scale(width, height)
   #   do something

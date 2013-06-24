@@ -20,11 +20,11 @@
       %p
         %b Job Description:
       %p 
-        = @job.description 
+        = raw sanitize(simple_format(@job.description), :tags => %w(br p) )
       %p
         %b How to Apply:
       %p 
-        = @job.info
+        = raw sanitize(simple_format(@job.info), :tags => %w(br p) )
       %p
         %b Company Website:
         = @job.employer.website 

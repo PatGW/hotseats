@@ -22,7 +22,6 @@ class PaymentNotificationsController < ApplicationController
 	    	current_prepaid = employer.prepaid
 	    	employer.update_attributes(:prepaid => current_prepaid + 4)
 
-	    	
 	   	 else	
 	    	
 	    end
