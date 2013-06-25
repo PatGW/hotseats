@@ -8,18 +8,13 @@
 
 
 
-a = Employer.new
-a.name = "Ben Cole"
-a.company_name = "BMC enter"
-a.city = "London"
-a.email = "employer@example.com"
-a.password = "testtest"
-a.save
-
-
-Job.create title: "manager", location: "london", description: "asd", info: "asd", employer: a
-Job.create title: "co worker", location: "london", description: "asd", info: "asd", employer: a
-Job.create title: "prostitute", location: "london", description: "asd", info: "asd", employer: a
+# a = Employer.new
+# a.name = ""
+# a.company_name = ""
+# a.city = ""
+# a.email = ""
+# a.password = ""
+# a.save
 
 
 ActsAsTaggableOn::Tag.create name: "Account Management"
@@ -38,10 +33,3 @@ ActsAsTaggableOn::Tag.create name: "User Experience"
 ActsAsTaggableOn::Tag.create name: "Web Design / Development"
 
 
-
-a = Applicant.new
-a.name = "James Smith"
-a.city = "Southampton"
-a.email = "applicant@example.com"
-a.password = "testtest"
-a.save
