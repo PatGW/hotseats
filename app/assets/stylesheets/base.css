@@ -27,12 +27,14 @@ a:visited {color:white; text-decoration: none;}
 .redlink :link {color:#BF0404;}  
 .redlink a:visited {color:#BF0404;}
 
+.blacklink :link {color:#000000; text-decoration: none;}  
+.blacklink a:visited {color:#000000; text-decoration: none;}
+.blacklink a:hover { text-decoration: underline;}
+
 #wrapper { 
         background-color: #FFFFFF;
          box-shadow: 0px 7px 7px 0px #9797A6;
-        
-
-    -webkit-border-radius: 0 0 8px 8px;
+        -webkit-border-radius: 0 0 8px 8px;
         -moz-border-radius: 0 0 8px 8px;
         border-radius: 0 0 8px 8px;
         /*border-top: 1px solid black; */       
@@ -54,9 +56,7 @@ a:visited {color:white; text-decoration: none;}
         -webkit-border-radius: 8px 8px 0 0;
         -moz-border-radius: 8px 8px 0 0;
         border-radius: 8px 8px 0 0;
-        
         behavior: url(/JS/PIE.htc);
-
         font-size: 16px;
         background-color: #BF0404;
         height: 40px;
@@ -69,8 +69,6 @@ a:visited {color:white; text-decoration: none;}
         height: 220px;
         background-color: #F5F3F3;
 }
-
-
 
 #pagination {
     
@@ -124,7 +122,7 @@ a:visited {color:white; text-decoration: none;}
 
 }
 
-#jobcontainer { margin-right:  4px; background-color: white;}
+#jobcontainer { margin-right:  4px; background-color: white; height: auto;}
 
 #logo { margin-top: 3px; float: left; margin-bottom: 2px }
 
@@ -488,16 +486,14 @@ h3 {line-height: 20px;}
 
      width: 100%; 
         background-color: #FFFFFF; 
-        height: 113px;
-       
-
-
+        height: auto;
 }
 
 #logintitle {
 
     box-shadow: 0px #9797A6;
-        
+    display: inline-block;
+    text-align: bottom; 
 
     -webkit-border-radius: 8px 8px 0px 0px;
     -moz-border-radius: 8px 8px 0px 0px;
@@ -636,7 +632,7 @@ background-color: #f5f3f3;
 #viewjob {
 
     padding-left: 20px;  
-     
+    padding-bottom: 30px;
     margin-bottom: 20px;
     background-color: #f5f3f3;
 
@@ -648,6 +644,7 @@ background-color: #f5f3f3;
     behavior: url(/JS/PIE.htc); 
     margin-left: 10px;  
     min-height: 560px;
+    height: auto;
 }
 
 /*********************
@@ -899,23 +896,5 @@ label[for=job_employer_attributes_logo] {
 #link_container {
 
     margin-left: 20px;
-}
-
-#link_container,
-#link_container_applicants a:link {
-
-    color: black;
-}
-
-#link_container,
-#link_container_applicants a:visited {
-
-    color: black;
-}
-
-#link_container,
-#link_container_applicants a:hover {
-
-    text-decoration: underline;
 }
 

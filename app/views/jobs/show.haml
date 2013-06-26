@@ -22,39 +22,21 @@
       %p 
         = raw sanitize(simple_format(@job.description), :tags => %w(br p) )
       %p
-        %b How to Apply:
-      %p 
-        = raw sanitize(simple_format(@job.info), :tags => %w(br p) )
-      %p
+       
         %b Company Website:
         = @job.employer.website 
       %p
-      
-        
-
-
-
-      -if current_applicant && current_applicant.approved == true
-        =link_to "Apply for this job", apply_path(@job) unless current_applicant.applied_to?(@job) 
-      -elsif current_applicant
-        You are not approved yet
-      -else
-        You need to sign up to apply for jobs
-
-  #sidebar.grid_7
-    .sidebarheader
-      %h3 100% Satisfaction Guarantee
-    .sidebarline
-    .sidebar_content
+        %b How to Apply:
+      %p.redlink
+        -if current_applicant && current_applicant.approved == true 
+          = raw sanitize(simple_format(@job.info), :tags => %w(br p) )
+        -elsif current_applicant
+          Your Job Seekers account is currently being reviewed by a member of the Hotseats Team
+        -else
+          You need to #{link_to 'Sign Up', new_applicant_registration_path } or #{link_to 'Log In', new_applicant_session_path } to apply for jobs  
       %p
-        Post your job on HotSeats.co and if you're
-        not completely satisfied with the results
-        you receive simply contact us for a full
-        and courteous refund
-    .sidebarheader
-      %h3 A few of the future customers of HotSeats
-    
-      = image_tag("clients.png", :alt => "clients")
+      
+ Receive a full report on your CV's strengths and weaknesses #{link_to 'CLICK HERE', "http://www.careerconsultants.co.uk/find-me-a-job/cv-assessment/" }
       %h3 Post a Job
       .sidebarline
       .sidebar_content

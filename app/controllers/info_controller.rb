@@ -3,13 +3,12 @@ class InfoController < ApplicationController
 
   	if params[:search]
   		params[:page] == 1
-    	@test = Job.find(:all, :include => :employer, :conditions => ['title LIKE ?', "%#{params[:search]}%"])
-
-    	@jobs = Kaminari.paginate_array(@test).page(params[:page]).per(3)
+  		@jobpaid = Job.where(:jobpaid => "t")
+    	@finder = @jobpaid.find(:all, :include => :employer, :conditions => ['title LIKE ?', "%#{params[:search]}%"])
+    	@jobs = Kaminari.paginate_array(@finder).page(params[:page]).per(10)
 
     else
-
-    	   @jobs = Job.where(:jobpaid => true).order("created_at DESC").page(current_page).per(3)
+    	   @jobs = Job.where(:jobpaid => true).order("created_at DESC").page(current_page).per(10)
     end
 
   end
