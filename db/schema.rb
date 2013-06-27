@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603141815) do
+ActiveRecord::Schema.define(:version => 20130603141816) do
 
   create_table "applicants", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20130603141815) do
     t.string   "logo"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
-    t.integer  "prepaid"
+    t.integer  "prepaid",                :default => 0
   end
 
   add_index "employers", ["email"], :name => "index_employers_on_email", :unique => true
