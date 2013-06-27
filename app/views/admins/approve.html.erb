@@ -11,7 +11,6 @@
 	<div id="approvalbox">
 		<h6>Applicant name:</h6>
 		<p>
-	
 		<%= na.name %> 
 		<p>
 		<h6>Location:</h6>
@@ -26,7 +25,12 @@
 		<p>
 		<h6>Resume:</h6>
 		<p>
-		<%= link_to "Curriculum Vitae Download", "#{na.resume}" %>
+		 <% if na.resume.present? %>
+		 	<%= link_to "Curriculum Vitae Download", "#{na.resume}" %>	
+		 <% else %>
+		 	No Resume Uploaded
+		 <% end %>		
+		<p>
 		<h6>Account created date</h6>
 		<p>
 		<%= na.created_at %>
