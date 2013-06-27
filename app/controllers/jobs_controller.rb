@@ -5,12 +5,22 @@ class JobsController < ApplicationController
   def new
     @job = Job.new
     @job.build_employer unless current_employer
+
+    if current_employer
+      if current_employer.prepaid = nil
+        current_employer.update_attributes(:prepaid => 0)
+        else
+      end 
+    end     
+
   end
 
   def create
     
     @job = Job.new params[:job]
     @job.employer = @employer = current_employer || @job.employer
+
+    
 
     if @job.valid? && @employer.valid?
       @job.save!

@@ -1,14 +1,10 @@
 class Job < ActiveRecord::Base
   
-  attr_accessible :title, :location, :description, :info, :employer, :position_type, :employer_attributes, :jobpaid
-
-  
+  attr_accessible :title, :location, :description, :info, :employer, :position_type, :employer_attributes, :jobpaid  
   belongs_to :employer
   has_many :job_applications
   has_one :payment_notification
   accepts_nested_attributes_for :employer
-  
-  
   
   validates :employer, presence: true
   validates :title, presence: true

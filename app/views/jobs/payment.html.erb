@@ -1,6 +1,6 @@
 <%= render "layouts/header" %>
 <div id="wrapper" class="container_24">
-	<div id="jobcontainer" class= "grid_24 ">
+	<div id="jobcontainer" class= "grid_24">
 		<div id="make_payment_title"><h3>Make Payment for <%= @job.title %> Job listing</h3></div>
 		<div id="one_job_payment">
 			<h4>1 Job Listing</h3>
@@ -52,12 +52,14 @@
 			</div>
 
 		<% if current_employer %>
-			Your prepaid Job Balance is:
+		<div id="prepaid">
+			<h5>Your prepaid Job Balance is:
 			<%= current_employer.prepaid  %>
 			<% if current_employer.prepaid > 0 %>
 
-			<%= link_to 'Pay with prepaid Balance', prepaid_path(@job.id) %>
+			<%= link_to 'Pay with prepaid Balance', prepaid_path(@job.id) %></h5>
 			<% end %>
+		</div>	
 		<% end %>		
 
 	</div>
