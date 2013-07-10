@@ -1,0 +1,42 @@
+= render "applicants/shared/jobseekers_header"
+#loginwrapper.container_24
+  .logincontainer.grid_18.push_3
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      %div
+        = f.label :name, "Full Name:"
+        %br/
+        = f.text_field :name
+      %div
+        = f.label :email, "Email:"
+        %br/
+        = f.email_field :email, :autofocus => true
+      %div
+        = f.label :password, "Password:"
+        %br/
+        = f.password_field :password
+      %div
+        = f.label :password_confirmation, "Confirm Password:"
+        %br/
+        = f.password_field :password_confirmation
+      %div
+        = f.label :resume, "CV:"
+        %br/
+        = f.file_field :resume
+      %div
+        = f.label :website, "Linked in or blog URL:"
+        %br/
+        = f.text_field :website
+      %div
+        = f.label :city, "UK City:"
+        %br/
+        = f.text_field :city
+      = f.label :skill_list
+      - ActsAsTaggableOn::Tag.order(:name).each do |tag|
+        %p
+          = label_tag tag.name
+          = check_box_tag "applicant[skill_list][]", tag.name
+          %br/
+      %div= f.submit "Sign up"
+    #link_container_applicants{:style => "blacklink"}
+      = render "applicants/shared/links"

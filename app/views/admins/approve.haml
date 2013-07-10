@@ -1,0 +1,39 @@
+= render "layouts/header"
+#wrapper.container_24
+  #pagetitle
+    %h2 Approve Job Seeker Profiles
+  - if is_admin? == true
+    - @notapproved.each do |na|
+      #approvalbox
+        %h6 Applicant name:
+        %p
+          = na.name
+        %p
+        %h6 Location:
+        %p
+          = na.city
+        %p
+          = na.website
+        %p
+        %h6 Email:
+        %p
+          = na.email
+        %p
+        %h6 Resume:
+        %p
+          - if na.resume.present?
+            = link_to "Curriculum Vitae Download", "#{na.resume}"
+          - else
+            No Resume Uploaded
+        %p
+        %h6 Account created date
+        %p
+          = na.created_at
+        %p
+        #approvebutton
+          %h5= link_to("Approve Job Seeker", ap_path(na.id), :method => :put, :confirm => "Are you sure you want to approve this Job Seeker?")
+  - elsif current_applicant
+    Not Authorised - You are an applicant
+  - else
+    Not Authorised
+  = render "layouts/footer"

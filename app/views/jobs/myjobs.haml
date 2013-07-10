@@ -1,0 +1,17 @@
+= render "layouts/header"
+#wrapper.container_24
+  - if is_employer? == true
+    #pagetitle
+      %h2 Your Job Posts
+    - @employerjobs.each do |job|
+      #joblistingbox
+        %h4
+          = link_to job.title, viewjob_path(job)
+        %p
+          = job.location
+        %p
+        %h6= link_to "View applications", viewapplications_path(job)
+        %p
+  - else
+    you are not an employer
+  = render "layouts/footer"

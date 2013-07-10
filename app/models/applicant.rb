@@ -5,22 +5,15 @@ class Applicant < ActiveRecord::Base
   
   validates :name, presence: true
   validates :city, presence: true
-  
-  
+
   acts_as_taggable_on :skills
-  
   
   has_many :job_applications
   
   mount_uploader :resume, ResumeUploader
-  
-  
+
   def applied_to?(job)
     JobApplication.where(job_id: job, applicant_id: self).present?    
   end
 
-
-
-
-  
 end

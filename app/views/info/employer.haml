@@ -1,0 +1,25 @@
+= render "layouts/header"
+#wrapper.container_24
+  #jobcontainer.grid_24
+    .employerstitle
+      %h1 The Easy and Proven Way to Reach Qualified Marketing, Communications and Creative Professionals in the UK
+    .employersclients.grid_10.push_2
+      = image_tag("clientsbig.png", :alt => "clients big")
+    .employerscontent.grid_10.push_2
+      %h2
+        Why these companies and many
+        more are turning to HotSeats.co
+        to find and hire qualified talent...
+      HotSeats.co is the leading jobsite specializing in marketing, communications and creative jobs in the UK. Since our start in 2010, hundreds of employers in a wide-range of industries have used HotSeats.co to save time and reach more candidates with the skills and experience they are looking for.
+      %br/
+      %br/
+      Over 60,000 job seeking professionals visit our jobsite each month, and jobs are promoted through social media, our partner network, and in our member newsletter. Plus, every job posting comes with a 100% money-back guarantee if you are not satisfied for any reason.
+    .clear
+    .grid_9.redline.push_1
+    .redbutton_employers.grid_4.push_1
+      .buttontext_employer
+        = image_tag("flamesmall.png", :alt => "HotSeats.co Logo", :class => "employer_fire_button")
+        = link_to "Post Job", new_jobs_path
+    .grid_9.redline.push_1
+  .space
+  = render "layouts/footer"

@@ -1,0 +1,33 @@
+= render "layouts/header"
+#wrapper.container_24
+  #pagetitle
+    %h2
+      = @job.title
+      applicants:
+  - @applications.each do |app|
+    #applicantbox
+      %p
+      %h6 Applicant name:
+      %p
+        = app.name
+      %p
+      %h6 Email:
+      %p
+        = app.email
+      %p
+      %p
+      %h6 Location:
+      %p
+        = app.city
+      %p
+      %h6 Website:
+      %p
+        = app.website
+      %p
+      %h6 Resume:
+      = link_to "Curriculum Vitae Download", "#{app.resume}"
+      %p
+      %h6 Applied date
+      %p
+        = app.created_at
+  = render "layouts/footer"

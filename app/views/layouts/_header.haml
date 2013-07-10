@@ -1,0 +1,40 @@
+#header
+  #headercontent.container_24
+    #flash
+      = flash[:notice]
+    #logo
+      = link_to image_tag("logo.png", :alt => "HotSeats.co Logo"), root_path
+    #social
+      - if current_employer
+        Employers:
+        \#{link_to "My Jobs", myjobs_path}
+        \#{link_to "Logout", destroy_employer_session_path, :method=>:delete}
+      - else
+      - unless current_employer
+        - if current_applicant
+          = link_to "Logout", destroy_applicant_session_path, :method=>:delete
+        - else
+          Job Seekers:
+          \#{link_to "Login", new_applicant_session_path}
+          \#{link_to "Signup", new_applicant_registration_path}
+      = link_to image_tag("facebook.png", :alt => "facebook small logo"), 'http://www.facebook.com'
+      = link_to image_tag("twitter.png", :alt => "facebook small logo"), 'http://www.twitter.com'
+      = link_to image_tag("google-plus.png", :alt => "facebook small logo"), 'http://plus.google.com/'
+    .clear
+    %div{:style => "background: Red; width: 200px;"}
+    #navbar
+      %ol
+        %li
+          = link_to "Jobs", root_path
+        %li
+          = link_to "Post Job", new_jobs_path
+        %li
+          = link_to "Employers", employer_path
+        %li
+          = link_to "Guarantee", guarantee_path
+        %li
+          %a{:href => "/blog"} Blog
+        %li
+          = link_to "Contact", contact_path
+        %li
+          = link_to "Employer Login", new_employer_session_path

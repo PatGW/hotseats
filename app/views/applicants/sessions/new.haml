@@ -1,0 +1,20 @@
+= render "applicants/shared/jobseekers_header"
+#loginwrapper.container_24
+  .logincontainer.grid_18.push_3
+    .loginbox
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        %div
+          = f.label :email
+          %br/
+          = f.email_field :email, :autofocus => true
+        %div
+          = f.label :password
+          %br/
+          = f.password_field :password
+        - if devise_mapping.rememberable?
+          %div
+            = f.check_box :remember_me
+            = f.label :remember_me
+        %div= f.submit "Sign in"
+    #link_container.blacklink
+      = render "applicants/shared/links"

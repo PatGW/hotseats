@@ -1,0 +1,58 @@
+= render "layouts/header"
+#wrapper.container_24
+  #jobcontainer.grid_17
+    .title
+      %h1 Contact Us
+    .contactcontent
+      %p
+        HotSeats.co works with employers across the UK. We enjoy helping great companies
+        connect with talented professionals. Give us a call or send us an email anytime - we
+        are always happy to help and would love to hear from you.
+      %p Call us:
+      %h6 0161 212 2388
+      %p Mailing Address:
+      %h6
+        HotSeats.co, St James Court‎
+        30 Brown St, Manchester, Greater Manchester M2 1DH, UK
+      %br/
+      %h6 Alternatively, contact us using the form below
+    #contactform
+      = form_for @message, :url => contact_path do |form|
+        %fieldset.fields
+          .namefield
+            = form.label :name
+            = form.text_field :name
+          .emailfield
+            = form.label :email
+            = form.text_field :email
+          .field
+            = form.label :subject
+            = form.text_field :subject
+          .field
+            = form.text_area :body
+        %fieldset.actions
+          = form.submit "Send"
+  #sidebar.grid_7
+    .sidebarheader
+      %h3 100% Satisfaction Guarantee
+    .sidebarline
+    .sidebar_content
+      %p
+        Post your job on HotSeats.co and if you're
+        not completely satisfied with the results
+        you receive simply contact us for a full
+        and courteous refund
+    .sidebarheader
+      %h3 "My CV was one of the best CVs the company had ever seen."
+    .sidebarline
+    .sidebar_content.grid_7.redlink
+      %p
+        Receive a full report on your CV's strengths and weaknesses #{link_to "CLICK HERE", "http://www.careerconsultants.co.uk/find-me-a-job/cv-assessment/"}
+    %h3 Post a Job
+    .sidebarline
+    .sidebar_content
+      %p Post a job with HotSeats.co today for guaranteed recruitment satisfaction.
+    .redbutton_sidebar
+      .buttontext= link_to "Post job", new_jobs_path
+  .clear
+= render "layouts/footer"
